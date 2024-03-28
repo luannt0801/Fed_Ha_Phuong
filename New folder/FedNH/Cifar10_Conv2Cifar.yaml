@@ -33,7 +33,7 @@ server_config:
   ##### algorithm specific settings go here ########
   #################################################
   # FedNH:
-  FedNH_smoothing: 0.9
+  FedNH_smoothing: 0.8
   FedNH_server_adv_prototype_agg: False
 
   # CReFF
@@ -78,7 +78,8 @@ client_config:
 
   # FedNH
   FedNH_return_embedding: False
-  FedNH_head_init: orthogonal
+  # FedNH_head_init: orthogonal
+  FedNH_head_init: uniform
   FedNH_client_adv_prototype_agg: False
   FedNH_fix_scaling: False
 

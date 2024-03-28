@@ -213,7 +213,7 @@ if __name__ == "__main__":
     # logging.basicConfig(filename=LOGGING_FILE, level=logging.INFO, format='%(asctime)s - %(message)s')
 
     LOGGING_DIR = 'D:\\Phuong ham hamm\\Fed_Ha_Phuong\\New folder\\FedNH\\logs'
-    LOGGING_FILE = os.path.join(LOGGING_DIR, 'app-log-1st-KETQUA.log')
+    LOGGING_FILE = os.path.join(LOGGING_DIR, 'app-log-2st-uniform-KETQUA.log')
 
     # Create log directory if it doesn't exist
     os.makedirs(LOGGING_DIR, exist_ok=True)
