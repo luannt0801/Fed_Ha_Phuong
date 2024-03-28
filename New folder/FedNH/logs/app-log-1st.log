@@ -1,0 +1,18 @@
+2024-03-28 14:25:03,877 - #### START RUN ####
+2024-03-28 14:25:03,878 - #### START RUN ####
+2024-03-28 14:25:03,879 - Cac tham so truyen vao:
+ Namespace(purpose='Cifar', device='cuda:0', global_seed=0, use_wandb=False, keep_clients_model=False, no_norm=False, optimizer='SGD', num_epochs=5, client_lr=0.01, client_lr_scheduler='diminishing', sgd_momentum=0.9, sgd_weight_decay=1e-05, use_sam=False, yamlfile='./Cifar10_Conv2Cifar.yaml', strategy='FedNH', num_clients=10, num_rounds=10, participate_ratio=0.2, partition='noniid-label-distribution', beta='0.3', num_classes_per_client=None, num_shards_per_client=None, FedNH_smoothing=0.9, FedNH_server_adv_prototype_agg=False, FedNH_client_adv_prototype_agg=False, FedROD_hyper_clf=True, FedROD_phead_separate=False, FedProto_lambda=0.1, FedRep_head_epochs=10, FedBABU_finetune_epoch=5, Ditto_lambda=0.75, CReFF_num_of_fl_feature=100, CReFF_match_epoch=100, CReFF_crt_epoch=300, CReFF_lr_net=0.01, CReFF_lr_feature=0.1)
+2024-03-28 14:25:03,891 - results are saved in: ./Cifar_FedNH/FedNH_Cifar10_Conv2Cifar_noniid-label-distribution_beta_0.3_num_clients_10_participate_ratio_0.2_global_seed_0_FedNH_smoothing_0.9_FedNH_client_adv_prototype_agg_False_no_norm_False
+2024-03-28 14:25:05,013 - FedUHServer: the following layers will not be updated: ['prototype']
+2024-03-28 14:26:34,424 - #### START RUN ####
+2024-03-28 14:26:34,425 - #### START RUN ####
+2024-03-28 14:26:34,425 - Cac tham so truyen vao:
+ Namespace(purpose='Cifar', device='cuda:0', global_seed=0, use_wandb=False, keep_clients_model=False, no_norm=False, optimizer='SGD', num_epochs=5, client_lr=0.01, client_lr_scheduler='diminishing', sgd_momentum=0.9, sgd_weight_decay=1e-05, use_sam=False, yamlfile='./Cifar10_Conv2Cifar.yaml', strategy='FedNH', num_clients=10, num_rounds=10, participate_ratio=0.2, partition='noniid-label-distribution', beta='0.3', num_classes_per_client=None, num_shards_per_client=None, FedNH_smoothing=0.9, FedNH_server_adv_prototype_agg=False, FedNH_client_adv_prototype_agg=False, FedROD_hyper_clf=True, FedROD_phead_separate=False, FedProto_lambda=0.1, FedRep_head_epochs=10, FedBABU_finetune_epoch=5, Ditto_lambda=0.75, CReFF_num_of_fl_feature=100, CReFF_match_epoch=100, CReFF_crt_epoch=300, CReFF_lr_net=0.01, CReFF_lr_feature=0.1)
+2024-03-28 14:26:34,428 - results are saved in: ./Cifar_FedNH/FedNH_Cifar10_Conv2Cifar_noniid-label-distribution_beta_0.3_num_clients_10_participate_ratio_0.2_global_seed_0_FedNH_smoothing_0.9_FedNH_client_adv_prototype_agg_False_no_norm_False
+2024-03-28 14:26:35,536 - FedUHServer: the following layers will not be updated: ['prototype']
+2024-03-28 14:26:35,538 - Round:1 - Active clients:[2 9]:
+2024-03-28 14:26:55,471 -  Training time:19.931 seconds
+2024-03-28 14:27:00,356 -  Testing time:4.876 seconds
+2024-03-28 14:27:00,356 -  avg_test_acc: {'uniform': 0.22699999809265137, 'validclass': 0.22699999809265137, 'labeldist': 0.22699999809265137}
+2024-03-28 14:27:00,356 -  pfl_avg_test_acc: {'uniform': 0.19394999742507935, 'validclass': 0.21409999579191208, 'labeldist': 0.734910786151886}
+2024-03-28 14:27:00,357 - Round:2 - Active clients:[4 1]:

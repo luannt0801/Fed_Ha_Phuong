@@ -1,0 +1,1006 @@
+2024-03-28 14:31:52,945 - #### START RUN ####
+2024-03-28 14:31:52,946 - #### START RUN ####
+2024-03-28 14:31:52,946 - Cac tham so truyen vao:
+ Namespace(purpose='Cifar', device='cuda:0', global_seed=0, use_wandb=False, keep_clients_model=False, no_norm=False, optimizer='SGD', num_epochs=5, client_lr=0.01, client_lr_scheduler='diminishing', sgd_momentum=0.9, sgd_weight_decay=1e-05, use_sam=False, yamlfile='./Cifar10_Conv2Cifar.yaml', strategy='FedNH', num_clients=100, num_rounds=200, participate_ratio=0.1, partition='noniid-label-distribution', beta='0.3', num_classes_per_client=None, num_shards_per_client=None, FedNH_smoothing=0.9, FedNH_server_adv_prototype_agg=False, FedNH_client_adv_prototype_agg=False, FedROD_hyper_clf=True, FedROD_phead_separate=False, FedProto_lambda=0.1, FedRep_head_epochs=10, FedBABU_finetune_epoch=5, Ditto_lambda=0.75, CReFF_num_of_fl_feature=100, CReFF_match_epoch=100, CReFF_crt_epoch=300, CReFF_lr_net=0.01, CReFF_lr_feature=0.1)
+2024-03-28 14:31:52,951 - results are saved in: ./Cifar_FedNH/FedNH_Cifar10_Conv2Cifar_noniid-label-distribution_beta_0.3_num_clients_100_participate_ratio_0.1_global_seed_0_FedNH_smoothing_0.9_FedNH_client_adv_prototype_agg_False_no_norm_False
+2024-03-28 14:31:54,638 - FedUHServer: the following layers will not be updated: ['prototype']
+2024-03-28 14:31:54,640 - Round:1 - Active clients:[80 84 33 81 93 17 36 82 69 65]:
+2024-03-28 14:32:00,335 -  Training time:5.692 seconds
+2024-03-28 14:32:11,791 -  Testing time:11.434 seconds
+2024-03-28 14:32:11,791 -  avg_test_acc: {'uniform': 0.1031000018119812, 'validclass': 0.1031000018119812, 'labeldist': 0.1031000092625618}
+2024-03-28 14:32:11,791 -  pfl_avg_test_acc: {'uniform': 0.11841000095009804, 'validclass': 0.19746865332126617, 'labeldist': 0.5548801332712173}
+2024-03-28 14:32:11,791 - Round:2 - Active clients:[83 30 56 24 16 23  2 27 28 13]:
+2024-03-28 14:32:16,990 -  Training time:5.194 seconds
+2024-03-28 14:32:28,242 -  Testing time:11.238 seconds
+2024-03-28 14:32:28,242 -  avg_test_acc: {'uniform': 0.11869999766349792, 'validclass': 0.11869999766349792, 'labeldist': 0.11869999766349792}
+2024-03-28 14:32:28,242 -  pfl_avg_test_acc: {'uniform': 0.1319600000977516, 'validclass': 0.2026512309908867, 'labeldist': 0.5418213218450546}
+2024-03-28 14:32:28,249 - Round:3 - Active clients:[93 67  6 64 96 83 98 42 25 15]:
+2024-03-28 14:32:33,514 -  Training time:5.263 seconds
+2024-03-28 14:32:46,375 -  Testing time:12.849 seconds
+2024-03-28 14:32:46,375 -  avg_test_acc: {'uniform': 0.1257999986410141, 'validclass': 0.1257999986410141, 'labeldist': 0.1257999986410141}
+2024-03-28 14:32:46,375 -  pfl_avg_test_acc: {'uniform': 0.1474700003862381, 'validclass': 0.2899071842432022, 'labeldist': 0.564487412571907}
+2024-03-28 14:32:46,379 - Round:4 - Active clients:[20 10 96 16 63 24 53 97 41 47]:
+2024-03-28 14:32:52,562 -  Training time:6.181 seconds
+2024-03-28 14:33:05,446 -  Testing time:12.874 seconds
+2024-03-28 14:33:05,446 -  avg_test_acc: {'uniform': 0.13130000233650208, 'validclass': 0.13130000233650208, 'labeldist': 0.13130000233650208}
+2024-03-28 14:33:05,446 -  pfl_avg_test_acc: {'uniform': 0.14027999937534333, 'validclass': 0.2229378990828991, 'labeldist': 0.6010546594858169}
+2024-03-28 14:33:05,451 - Round:5 - Active clients:[66 32 46 28 74 23 10 20 17 35]:
+2024-03-28 14:33:11,589 -  Training time:6.136 seconds
+2024-03-28 14:33:23,506 -  Testing time:11.906 seconds
+2024-03-28 14:33:23,506 -  avg_test_acc: {'uniform': 0.18610000610351562, 'validclass': 0.18610000610351562, 'labeldist': 0.18610000610351562}
+2024-03-28 14:33:23,507 -  pfl_avg_test_acc: {'uniform': 0.15848999992012977, 'validclass': 0.24518134891986848, 'labeldist': 0.6008789718151093}
+2024-03-28 14:33:23,512 - Round:6 - Active clients:[17 34  0 45 60 86 20 47 44 81]:
+2024-03-28 14:33:29,501 -  Training time:5.985 seconds
+2024-03-28 14:33:41,451 -  Testing time:11.938 seconds
+2024-03-28 14:33:41,451 -  avg_test_acc: {'uniform': 0.23899999260902405, 'validclass': 0.23899999260902405, 'labeldist': 0.23899999260902405}
+2024-03-28 14:33:41,451 -  pfl_avg_test_acc: {'uniform': 0.18387000039219856, 'validclass': 0.2614956349134445, 'labeldist': 0.6282094955444336}
+2024-03-28 14:33:41,456 - Round:7 - Active clients:[37 26 78 91 49 15 93 71 86 22]:
+2024-03-28 14:33:47,500 -  Training time:6.042 seconds
+2024-03-28 14:34:00,310 -  Testing time:12.799 seconds
+2024-03-28 14:34:00,310 -  avg_test_acc: {'uniform': 0.2354000061750412, 'validclass': 0.2354000061750412, 'labeldist': 0.2354000061750412}
+2024-03-28 14:34:00,310 -  pfl_avg_test_acc: {'uniform': 0.2164900004863739, 'validclass': 0.31062829196453096, 'labeldist': 0.5761228710412979}
+2024-03-28 14:34:00,311 - Round:8 - Active clients:[17 23  1 44 55 99 86 29 62 33]:
+2024-03-28 14:34:06,010 -  Training time:5.697 seconds
+2024-03-28 14:34:18,846 -  Testing time:12.826 seconds
+2024-03-28 14:34:18,846 -  avg_test_acc: {'uniform': 0.27799999713897705, 'validclass': 0.27799999713897705, 'labeldist': 0.27799999713897705}
+2024-03-28 14:34:18,846 -  pfl_avg_test_acc: {'uniform': 0.22694999873638153, 'validclass': 0.28353397101163863, 'labeldist': 0.5964248061180115}
+2024-03-28 14:34:18,851 - Round:9 - Active clients:[75 42 46 68  3 39 23 20 70 73]:
+2024-03-28 14:34:25,080 -  Training time:6.226 seconds
+2024-03-28 14:34:37,885 -  Testing time:12.791 seconds
+2024-03-28 14:34:37,885 -  avg_test_acc: {'uniform': 0.1437000036239624, 'validclass': 0.1437000036239624, 'labeldist': 0.1437000036239624}
+2024-03-28 14:34:37,887 -  pfl_avg_test_acc: {'uniform': 0.19164000153541566, 'validclass': 0.25759952440857886, 'labeldist': 0.7151838421821595}
+2024-03-28 14:34:37,887 - Round:10 - Active clients:[19 14 43 37 66  3 79 41 38 68]:
+2024-03-28 14:34:43,641 -  Training time:5.753 seconds
+2024-03-28 14:34:56,338 -  Testing time:12.683 seconds
+2024-03-28 14:34:56,339 -  avg_test_acc: {'uniform': 0.34700000286102295, 'validclass': 0.34700000286102295, 'labeldist': 0.34700000286102295}
+2024-03-28 14:34:56,339 -  pfl_avg_test_acc: {'uniform': 0.18946000337600707, 'validclass': 0.27482960373163223, 'labeldist': 0.6537232577800751}
+2024-03-28 14:34:56,344 - Round:11 - Active clients:[46 49 22 58 41 98 62 29 30 51]:
+2024-03-28 14:35:01,579 -  Training time:5.233 seconds
+2024-03-28 14:35:14,158 -  Testing time:12.567 seconds
+2024-03-28 14:35:14,158 -  avg_test_acc: {'uniform': 0.334199994802475, 'validclass': 0.334199994802475, 'labeldist': 0.334199994802475}
+2024-03-28 14:35:14,159 -  pfl_avg_test_acc: {'uniform': 0.20923000127077102, 'validclass': 0.2798089310526848, 'labeldist': 0.6763922333717346}
+2024-03-28 14:35:14,159 - Round:12 - Active clients:[17 41 92 14 68 31 89 15 21 60]:
+2024-03-28 14:35:21,171 -  Training time:7.009 seconds
+2024-03-28 14:35:33,871 -  Testing time:12.689 seconds
+2024-03-28 14:35:33,872 -  avg_test_acc: {'uniform': 0.321399986743927, 'validclass': 0.321399986743927, 'labeldist': 0.321399986743927}
+2024-03-28 14:35:33,872 -  pfl_avg_test_acc: {'uniform': 0.21417000368237496, 'validclass': 0.31509559154510497, 'labeldist': 0.6849632501602173}
+2024-03-28 14:35:33,872 - Round:13 - Active clients:[37 62 83 14 43  9 44 31 69 57]:
+2024-03-28 14:35:39,871 -  Training time:5.996 seconds
+2024-03-28 14:35:52,134 -  Testing time:12.246 seconds
+2024-03-28 14:35:52,135 -  avg_test_acc: {'uniform': 0.31060001254081726, 'validclass': 0.31060001254081726, 'labeldist': 0.31060004234313965}
+2024-03-28 14:35:52,135 -  pfl_avg_test_acc: {'uniform': 0.23956000059843063, 'validclass': 0.32196246534585954, 'labeldist': 0.6370622396469117}
+2024-03-28 14:35:52,135 - Round:14 - Active clients:[24 39 35 44 55 70 82 40 91 65]:
+2024-03-28 14:35:58,836 -  Training time:6.699 seconds
+2024-03-28 14:36:10,987 -  Testing time:12.138 seconds
+2024-03-28 14:36:10,987 -  avg_test_acc: {'uniform': 0.36390000581741333, 'validclass': 0.36390000581741333, 'labeldist': 0.36390000581741333}
+2024-03-28 14:36:10,987 -  pfl_avg_test_acc: {'uniform': 0.2703900009393692, 'validclass': 0.3333930537104607, 'labeldist': 0.653134074807167}
+2024-03-28 14:36:10,992 - Round:15 - Active clients:[84 36 57 51 46 78 93 14 11 59]:
+2024-03-28 14:36:17,861 -  Training time:6.867 seconds
+2024-03-28 14:36:31,031 -  Testing time:13.157 seconds
+2024-03-28 14:36:31,031 -  avg_test_acc: {'uniform': 0.362199991941452, 'validclass': 0.362199991941452, 'labeldist': 0.3622000217437744}
+2024-03-28 14:36:31,031 -  pfl_avg_test_acc: {'uniform': 0.2343899980187416, 'validclass': 0.36468476206064226, 'labeldist': 0.7173369646072387}
+2024-03-28 14:36:31,031 - Round:16 - Active clients:[ 7 25 71 42 47 29 63 88 50  9]:
+2024-03-28 14:36:37,340 -  Training time:6.307 seconds
+2024-03-28 14:36:50,548 -  Testing time:13.196 seconds
+2024-03-28 14:36:50,548 -  avg_test_acc: {'uniform': 0.3564999997615814, 'validclass': 0.3564999997615814, 'labeldist': 0.3564999997615814}
+2024-03-28 14:36:50,548 -  pfl_avg_test_acc: {'uniform': 0.22889000028371811, 'validclass': 0.39356841444969176, 'labeldist': 0.6911988258361816}
+2024-03-28 14:36:50,549 - Round:17 - Active clients:[71 28  9  4 73 34 94 92 47 37]:
+2024-03-28 14:36:55,404 -  Training time:4.853 seconds
+2024-03-28 14:37:07,921 -  Testing time:12.506 seconds
+2024-03-28 14:37:07,921 -  avg_test_acc: {'uniform': 0.3813000023365021, 'validclass': 0.3813000023365021, 'labeldist': 0.3813000023365021}
+2024-03-28 14:37:07,921 -  pfl_avg_test_acc: {'uniform': 0.23361000046133995, 'validclass': 0.32207837253808974, 'labeldist': 0.6526966869831086}
+2024-03-28 14:37:07,926 - Round:18 - Active clients:[53 47 43 54 33 48  0 12 44 91]:
+2024-03-28 14:37:13,537 -  Training time:5.608 seconds
+2024-03-28 14:37:26,259 -  Testing time:12.712 seconds
+2024-03-28 14:37:26,259 -  avg_test_acc: {'uniform': 0.3125, 'validclass': 0.3125, 'labeldist': 0.3125}
+2024-03-28 14:37:26,259 -  pfl_avg_test_acc: {'uniform': 0.25866000056266786, 'validclass': 0.42164583802223204, 'labeldist': 0.7077526211738586}
+2024-03-28 14:37:26,259 - Round:19 - Active clients:[85 72 16 18  2 38 90 30 83 61]:
+2024-03-28 14:37:31,661 -  Training time:5.399 seconds
+2024-03-28 14:37:44,639 -  Testing time:12.962 seconds
+2024-03-28 14:37:44,639 -  avg_test_acc: {'uniform': 0.32339999079704285, 'validclass': 0.32339999079704285, 'labeldist': 0.32340002059936523}
+2024-03-28 14:37:44,639 -  pfl_avg_test_acc: {'uniform': 0.24542999863624573, 'validclass': 0.3743496835231781, 'labeldist': 0.7117886006832123}
+2024-03-28 14:37:44,640 - Round:20 - Active clients:[70 74  2 44 56 48 12 36  0 49]:
+2024-03-28 14:37:50,156 -  Training time:5.514 seconds
+2024-03-28 14:38:02,966 -  Testing time:12.799 seconds
+2024-03-28 14:38:02,966 -  avg_test_acc: {'uniform': 0.359499990940094, 'validclass': 0.359499990940094, 'labeldist': 0.3595000207424164}
+2024-03-28 14:38:02,966 -  pfl_avg_test_acc: {'uniform': 0.25266999304294585, 'validclass': 0.4319526582956314, 'labeldist': 0.7396518111228942}
+2024-03-28 14:38:02,966 - Round:21 - Active clients:[23 81 85 34 62 46 42 31 93 11]:
+2024-03-28 14:38:10,106 -  Training time:7.137 seconds
+2024-03-28 14:38:22,909 -  Testing time:12.792 seconds
+2024-03-28 14:38:22,909 -  avg_test_acc: {'uniform': 0.4018000066280365, 'validclass': 0.4018000066280365, 'labeldist': 0.4017999768257141}
+2024-03-28 14:38:22,909 -  pfl_avg_test_acc: {'uniform': 0.25629999935626985, 'validclass': 0.3842086136341095, 'labeldist': 0.7077398538589478}
+2024-03-28 14:38:22,914 - Round:22 - Active clients:[ 2 49 82 31 37 12 87 42 99 85]:
+2024-03-28 14:38:29,081 -  Training time:6.163 seconds
+2024-03-28 14:38:41,899 -  Testing time:12.806 seconds
+2024-03-28 14:38:41,899 -  avg_test_acc: {'uniform': 0.37369999289512634, 'validclass': 0.37369999289512634, 'labeldist': 0.37370002269744873}
+2024-03-28 14:38:41,899 -  pfl_avg_test_acc: {'uniform': 0.28488999903202056, 'validclass': 0.39657674431800843, 'labeldist': 0.7043339729309082}
+2024-03-28 14:38:41,899 - Round:23 - Active clients:[26 80 82 68 77 37  3 55 20 17]:
+2024-03-28 14:38:49,184 -  Training time:7.282 seconds
+2024-03-28 14:39:02,034 -  Testing time:12.839 seconds
+2024-03-28 14:39:02,035 -  avg_test_acc: {'uniform': 0.3720000088214874, 'validclass': 0.3720000088214874, 'labeldist': 0.3720000386238098}
+2024-03-28 14:39:02,035 -  pfl_avg_test_acc: {'uniform': 0.24508999958634375, 'validclass': 0.4163071423768997, 'labeldist': 0.7638241648674011}
+2024-03-28 14:39:02,035 - Round:24 - Active clients:[26 31 37 86 76 14 88 48 71 67]:
+2024-03-28 14:39:10,271 -  Training time:8.234 seconds
+2024-03-28 14:39:23,227 -  Testing time:12.946 seconds
+2024-03-28 14:39:23,227 -  avg_test_acc: {'uniform': 0.3499000072479248, 'validclass': 0.3499000072479248, 'labeldist': 0.3499000072479248}
+2024-03-28 14:39:23,227 -  pfl_avg_test_acc: {'uniform': 0.24787999838590621, 'validclass': 0.4805659532546997, 'labeldist': 0.7422675728797913}
+2024-03-28 14:39:23,228 - Round:25 - Active clients:[41 29 33 65 74  6 57 89 87 98]:
+2024-03-28 14:39:29,184 -  Training time:5.953 seconds
+2024-03-28 14:39:41,359 -  Testing time:12.164 seconds
+2024-03-28 14:39:41,359 -  avg_test_acc: {'uniform': 0.4106000065803528, 'validclass': 0.4106000065803528, 'labeldist': 0.4106000065803528}
+2024-03-28 14:39:41,359 -  pfl_avg_test_acc: {'uniform': 0.29505999833345414, 'validclass': 0.37771031856536863, 'labeldist': 0.7099377155303955}
+2024-03-28 14:39:41,364 - Round:26 - Active clients:[ 8 69 84 41 25  5 63 95 33 70]:
+2024-03-28 14:39:47,752 -  Training time:6.385 seconds
+2024-03-28 14:40:05,420 -  Testing time:17.651 seconds
+2024-03-28 14:40:05,421 -  avg_test_acc: {'uniform': 0.3140000104904175, 'validclass': 0.3140000104904175, 'labeldist': 0.31400004029273987}
+2024-03-28 14:40:05,421 -  pfl_avg_test_acc: {'uniform': 0.25301000475883484, 'validclass': 0.4407766580581665, 'labeldist': 0.6975611329078675}
+2024-03-28 14:40:05,421 - Round:27 - Active clients:[89 68 43 50 40 95 27 85 22 44]:
+2024-03-28 14:40:12,712 -  Training time:7.287 seconds
+2024-03-28 14:40:28,300 -  Testing time:15.568 seconds
+2024-03-28 14:40:28,300 -  avg_test_acc: {'uniform': 0.3874000012874603, 'validclass': 0.3874000012874603, 'labeldist': 0.3874000310897827}
+2024-03-28 14:40:28,301 -  pfl_avg_test_acc: {'uniform': 0.26453000232577323, 'validclass': 0.3488547205924988, 'labeldist': 0.6994961678981781}
+2024-03-28 14:40:28,301 - Round:28 - Active clients:[67 14  0 86 13 18 30 36 52 95]:
+2024-03-28 14:40:36,155 -  Training time:7.850 seconds
+2024-03-28 14:40:51,306 -  Testing time:15.139 seconds
+2024-03-28 14:40:51,306 -  avg_test_acc: {'uniform': 0.3873000144958496, 'validclass': 0.3873000144958496, 'labeldist': 0.3872999846935272}
+2024-03-28 14:40:51,306 -  pfl_avg_test_acc: {'uniform': 0.2549200028181076, 'validclass': 0.4589830130338669, 'labeldist': 0.757627671957016}
+2024-03-28 14:40:51,306 - Round:29 - Active clients:[73  8 10  7 19 71 92 25 38 12]:
+2024-03-28 14:40:57,054 -  Training time:5.744 seconds
+2024-03-28 14:41:11,646 -  Testing time:14.581 seconds
+2024-03-28 14:41:11,646 -  avg_test_acc: {'uniform': 0.4092999994754791, 'validclass': 0.4092999994754791, 'labeldist': 0.4092999994754791}
+2024-03-28 14:41:11,646 -  pfl_avg_test_acc: {'uniform': 0.2417299970984459, 'validclass': 0.3918860286474228, 'labeldist': 0.7053163230419159}
+2024-03-28 14:41:11,647 - Round:30 - Active clients:[20 91 34 52  8 74 21 88 80 89]:
+2024-03-28 14:41:20,785 -  Training time:9.135 seconds
+2024-03-28 14:41:36,689 -  Testing time:15.893 seconds
+2024-03-28 14:41:36,689 -  avg_test_acc: {'uniform': 0.39419999718666077, 'validclass': 0.39419999718666077, 'labeldist': 0.39420002698898315}
+2024-03-28 14:41:36,689 -  pfl_avg_test_acc: {'uniform': 0.2960400015115738, 'validclass': 0.44017253816127777, 'labeldist': 0.7051382243633271}
+2024-03-28 14:41:36,689 - Round:31 - Active clients:[17 33 76  3 56  0 37  8 60 67]:
+2024-03-28 14:41:44,350 -  Training time:7.656 seconds
+2024-03-28 14:41:56,454 -  Testing time:12.089 seconds
+2024-03-28 14:41:56,454 -  avg_test_acc: {'uniform': 0.36800000071525574, 'validclass': 0.36800000071525574, 'labeldist': 0.3680000305175781}
+2024-03-28 14:41:56,455 -  pfl_avg_test_acc: {'uniform': 0.26134999841451645, 'validclass': 0.49094273149967194, 'labeldist': 0.7444863021373749}
+2024-03-28 14:41:56,456 - Round:32 - Active clients:[22 39 85 97 55 33 80 13 27 96]:
+2024-03-28 14:42:04,834 -  Training time:8.374 seconds
+2024-03-28 14:42:19,761 -  Testing time:14.895 seconds
+2024-03-28 14:42:19,761 -  avg_test_acc: {'uniform': 0.44780001044273376, 'validclass': 0.44780001044273376, 'labeldist': 0.44780001044273376}
+2024-03-28 14:42:19,762 -  pfl_avg_test_acc: {'uniform': 0.284620001912117, 'validclass': 0.4149352788925171, 'labeldist': 0.732924860715866}
+2024-03-28 14:42:19,767 - Round:33 - Active clients:[56 90 95 82 60 71  6 81  2 70]:
+2024-03-28 14:42:27,258 -  Training time:7.486 seconds
+2024-03-28 14:42:42,625 -  Testing time:15.354 seconds
+2024-03-28 14:42:42,625 -  avg_test_acc: {'uniform': 0.4498000144958496, 'validclass': 0.4498000144958496, 'labeldist': 0.4498000144958496}
+2024-03-28 14:42:42,625 -  pfl_avg_test_acc: {'uniform': 0.3103399991989136, 'validclass': 0.43283253610134126, 'labeldist': 0.7515356123447419}
+2024-03-28 14:42:42,630 - Round:34 - Active clients:[14 74 15  4 32 59 91 10 50 53]:
+2024-03-28 14:42:49,086 -  Training time:6.453 seconds
+2024-03-28 14:43:04,223 -  Testing time:15.117 seconds
+2024-03-28 14:43:04,223 -  avg_test_acc: {'uniform': 0.4666000008583069, 'validclass': 0.4666000008583069, 'labeldist': 0.4666000008583069}
+2024-03-28 14:43:04,223 -  pfl_avg_test_acc: {'uniform': 0.31006999760866166, 'validclass': 0.41960558891296384, 'labeldist': 0.6880367934703827}
+2024-03-28 14:43:04,228 - Round:35 - Active clients:[40 71 98 27 70 31 10 24 51 35]:
+2024-03-28 14:43:13,027 -  Training time:8.797 seconds
+2024-03-28 14:43:29,565 -  Testing time:16.527 seconds
+2024-03-28 14:43:29,566 -  avg_test_acc: {'uniform': 0.4700999855995178, 'validclass': 0.4700999855995178, 'labeldist': 0.4701000154018402}
+2024-03-28 14:43:29,566 -  pfl_avg_test_acc: {'uniform': 0.30718000084161756, 'validclass': 0.4093056291341782, 'labeldist': 0.6901834845542908}
+2024-03-28 14:43:29,572 - Round:36 - Active clients:[59 42  2 27 28 75 58 68 52 74]:
+2024-03-28 14:43:36,857 -  Training time:7.282 seconds
+2024-03-28 14:43:53,661 -  Testing time:16.793 seconds
+2024-03-28 14:43:53,661 -  avg_test_acc: {'uniform': 0.38420000672340393, 'validclass': 0.38420000672340393, 'labeldist': 0.3842000365257263}
+2024-03-28 14:43:53,662 -  pfl_avg_test_acc: {'uniform': 0.2700200013816357, 'validclass': 0.3840921476483345, 'labeldist': 0.7824405550956726}
+2024-03-28 14:43:53,662 - Round:37 - Active clients:[61 49 86 78  5 91 81 82 89 18]:
+2024-03-28 14:44:01,178 -  Training time:7.511 seconds
+2024-03-28 14:44:17,168 -  Testing time:15.975 seconds
+2024-03-28 14:44:17,169 -  avg_test_acc: {'uniform': 0.4810999929904938, 'validclass': 0.4810999929904938, 'labeldist': 0.4810999929904938}
+2024-03-28 14:44:17,169 -  pfl_avg_test_acc: {'uniform': 0.3231100007891655, 'validclass': 0.47163721919059753, 'labeldist': 0.7539471566677094}
+2024-03-28 14:44:17,175 - Round:38 - Active clients:[40 73 49 45 64 16 69 17 72 66]:
+2024-03-28 14:44:22,056 -  Training time:4.878 seconds
+2024-03-28 14:44:37,954 -  Testing time:15.889 seconds
+2024-03-28 14:44:37,954 -  avg_test_acc: {'uniform': 0.4763999879360199, 'validclass': 0.4763999879360199, 'labeldist': 0.4764000177383423}
+2024-03-28 14:44:37,954 -  pfl_avg_test_acc: {'uniform': 0.30154000371694567, 'validclass': 0.40532214045524595, 'labeldist': 0.7134757041931152}
+2024-03-28 14:44:37,955 - Round:39 - Active clients:[22 53 84 57 87 58 29 21 85 79]:
+2024-03-28 14:44:44,304 -  Training time:6.347 seconds
+2024-03-28 14:45:00,548 -  Testing time:16.234 seconds
+2024-03-28 14:45:00,548 -  avg_test_acc: {'uniform': 0.531499981880188, 'validclass': 0.531499981880188, 'labeldist': 0.531499981880188}
+2024-03-28 14:45:00,549 -  pfl_avg_test_acc: {'uniform': 0.31338000297546387, 'validclass': 0.4084666669368744, 'labeldist': 0.7161972939968109}
+2024-03-28 14:45:00,553 - Round:40 - Active clients:[79 75 63 15 38 11 40 45 39 62]:
+2024-03-28 14:45:07,200 -  Training time:6.643 seconds
+2024-03-28 14:45:21,886 -  Testing time:14.675 seconds
+2024-03-28 14:45:21,886 -  avg_test_acc: {'uniform': 0.46939998865127563, 'validclass': 0.46939998865127563, 'labeldist': 0.469400018453598}
+2024-03-28 14:45:21,886 -  pfl_avg_test_acc: {'uniform': 0.27752000242471697, 'validclass': 0.3984686151146889, 'labeldist': 0.7586026668548584}
+2024-03-28 14:45:21,887 - Round:41 - Active clients:[42 94 37  6 79 32 24  0 33 93]:
+2024-03-28 14:45:28,432 -  Training time:6.544 seconds
+2024-03-28 14:45:43,363 -  Testing time:14.918 seconds
+2024-03-28 14:45:43,363 -  avg_test_acc: {'uniform': 0.49129998683929443, 'validclass': 0.49129998683929443, 'labeldist': 0.4913000166416168}
+2024-03-28 14:45:43,363 -  pfl_avg_test_acc: {'uniform': 0.32517999559640887, 'validclass': 0.4695261478424072, 'labeldist': 0.7082194209098815}
+2024-03-28 14:45:43,364 - Round:42 - Active clients:[83 53 70 45 44 39 22 80 10  0]:
+2024-03-28 14:45:49,123 -  Training time:5.756 seconds
+2024-03-28 14:46:05,216 -  Testing time:16.080 seconds
+2024-03-28 14:46:05,217 -  avg_test_acc: {'uniform': 0.49390000104904175, 'validclass': 0.49390000104904175, 'labeldist': 0.49390003085136414}
+2024-03-28 14:46:05,217 -  pfl_avg_test_acc: {'uniform': 0.31025999784469604, 'validclass': 0.4658972233533859, 'labeldist': 0.7405306339263916}
+2024-03-28 14:46:05,217 - Round:43 - Active clients:[20  2 15 22 57 91 69 55 11 79]:
+2024-03-28 14:46:13,214 -  Training time:7.995 seconds
+2024-03-28 14:46:29,460 -  Testing time:16.233 seconds
+2024-03-28 14:46:29,460 -  avg_test_acc: {'uniform': 0.4869000017642975, 'validclass': 0.4869000017642975, 'labeldist': 0.4869000315666199}
+2024-03-28 14:46:29,460 -  pfl_avg_test_acc: {'uniform': 0.3418899968266487, 'validclass': 0.4560641199350357, 'labeldist': 0.7435935080051422}
+2024-03-28 14:46:29,461 - Round:44 - Active clients:[42 54 27 93 39 65  7 26 24 60]:
+2024-03-28 14:46:36,676 -  Training time:7.212 seconds
+2024-03-28 14:46:50,992 -  Testing time:14.304 seconds
+2024-03-28 14:46:50,992 -  avg_test_acc: {'uniform': 0.3977999985218048, 'validclass': 0.3977999985218048, 'labeldist': 0.3977999985218048}
+2024-03-28 14:46:50,993 -  pfl_avg_test_acc: {'uniform': 0.31449000239372255, 'validclass': 0.4967588931322098, 'labeldist': 0.7347212076187134}
+2024-03-28 14:46:50,993 - Round:45 - Active clients:[ 0  1 62 76 37 99 78 38  2 84]:
+2024-03-28 14:46:57,868 -  Training time:6.872 seconds
+2024-03-28 14:47:11,892 -  Testing time:14.011 seconds
+2024-03-28 14:47:11,892 -  avg_test_acc: {'uniform': 0.5169000029563904, 'validclass': 0.5169000029563904, 'labeldist': 0.5169000029563904}
+2024-03-28 14:47:11,892 -  pfl_avg_test_acc: {'uniform': 0.33914999961853026, 'validclass': 0.4496606379747391, 'labeldist': 0.7131761610507965}
+2024-03-28 14:47:11,892 - Round:46 - Active clients:[71 33 37 10 44 34 24 98 73 95]:
+2024-03-28 14:47:19,445 -  Training time:7.549 seconds
+2024-03-28 14:47:34,056 -  Testing time:14.601 seconds
+2024-03-28 14:47:34,057 -  avg_test_acc: {'uniform': 0.5342000126838684, 'validclass': 0.5342000126838684, 'labeldist': 0.5342000126838684}
+2024-03-28 14:47:34,057 -  pfl_avg_test_acc: {'uniform': 0.3424800008535385, 'validclass': 0.45038611590862276, 'labeldist': 0.7096079230308533}
+2024-03-28 14:47:34,062 - Round:47 - Active clients:[17 90 94 86 63  5 38 14 40 47]:
+2024-03-28 14:47:40,696 -  Training time:6.632 seconds
+2024-03-28 14:47:55,947 -  Testing time:15.239 seconds
+2024-03-28 14:47:55,947 -  avg_test_acc: {'uniform': 0.4625000059604645, 'validclass': 0.4625000059604645, 'labeldist': 0.46250003576278687}
+2024-03-28 14:47:55,948 -  pfl_avg_test_acc: {'uniform': 0.32258000671863557, 'validclass': 0.49113642871379853, 'labeldist': 0.7677972972393036}
+2024-03-28 14:47:55,948 - Round:48 - Active clients:[93  5 71  9 11 79 69  8 59 63]:
+2024-03-28 14:48:03,164 -  Training time:7.214 seconds
+2024-03-28 14:48:17,677 -  Testing time:14.502 seconds
+2024-03-28 14:48:17,677 -  avg_test_acc: {'uniform': 0.5094000101089478, 'validclass': 0.5094000101089478, 'labeldist': 0.5094000101089478}
+2024-03-28 14:48:17,678 -  pfl_avg_test_acc: {'uniform': 0.3194499984383583, 'validclass': 0.5356244444847107, 'labeldist': 0.7598159790039063}
+2024-03-28 14:48:17,678 - Round:49 - Active clients:[76 25 28 75 81 47 41 22 29  1]:
+2024-03-28 14:48:23,840 -  Training time:6.160 seconds
+2024-03-28 14:48:38,640 -  Testing time:14.781 seconds
+2024-03-28 14:48:38,640 -  avg_test_acc: {'uniform': 0.5338000059127808, 'validclass': 0.5338000059127808, 'labeldist': 0.5338000655174255}
+2024-03-28 14:48:38,640 -  pfl_avg_test_acc: {'uniform': 0.2961800038814545, 'validclass': 0.44435921013355256, 'labeldist': 0.7882710099220276}
+2024-03-28 14:48:38,641 - Round:50 - Active clients:[80 79 25 15 39 40 53 17 57 50]:
+2024-03-28 14:48:44,437 -  Training time:5.794 seconds
+2024-03-28 14:48:59,260 -  Testing time:14.808 seconds
+2024-03-28 14:48:59,260 -  avg_test_acc: {'uniform': 0.4410000145435333, 'validclass': 0.4410000145435333, 'labeldist': 0.4410000443458557}
+2024-03-28 14:48:59,261 -  pfl_avg_test_acc: {'uniform': 0.33740000426769257, 'validclass': 0.5055819422006607, 'labeldist': 0.7619111239910126}
+2024-03-28 14:48:59,261 - Round:51 - Active clients:[71 43 11 83 78 19 80  4 79 75]:
+2024-03-28 14:49:05,943 -  Training time:6.679 seconds
+2024-03-28 14:49:21,109 -  Testing time:15.140 seconds
+2024-03-28 14:49:21,109 -  avg_test_acc: {'uniform': 0.5133000016212463, 'validclass': 0.5133000016212463, 'labeldist': 0.5133000016212463}
+2024-03-28 14:49:21,109 -  pfl_avg_test_acc: {'uniform': 0.3085200011730194, 'validclass': 0.4411024644970894, 'labeldist': 0.7500987648963928}
+2024-03-28 14:49:21,110 - Round:52 - Active clients:[82  8 44 19  2 73 37 89 67 18]:
+2024-03-28 14:49:27,528 -  Training time:6.413 seconds
+2024-03-28 14:49:43,762 -  Testing time:16.220 seconds
+2024-03-28 14:49:43,762 -  avg_test_acc: {'uniform': 0.428600013256073, 'validclass': 0.428600013256073, 'labeldist': 0.428600013256073}
+2024-03-28 14:49:43,762 -  pfl_avg_test_acc: {'uniform': 0.3350500017404556, 'validclass': 0.5558648824691772, 'labeldist': 0.7859074652194977}
+2024-03-28 14:49:43,763 - Round:53 - Active clients:[19 78 64  3 71 32 68 42 55 97]:
+2024-03-28 14:49:52,226 -  Training time:8.460 seconds
+2024-03-28 14:50:08,159 -  Testing time:15.923 seconds
+2024-03-28 14:50:08,159 -  avg_test_acc: {'uniform': 0.4823000133037567, 'validclass': 0.4823000133037567, 'labeldist': 0.4823000133037567}
+2024-03-28 14:50:08,160 -  pfl_avg_test_acc: {'uniform': 0.3138899989426136, 'validclass': 0.45391265749931337, 'labeldist': 0.7456658363342286}
+2024-03-28 14:50:08,160 - Round:54 - Active clients:[36 70 48 94 81 46 38 29 34 22]:
+2024-03-28 14:50:14,659 -  Training time:6.497 seconds
+2024-03-28 14:50:29,623 -  Testing time:14.954 seconds
+2024-03-28 14:50:29,623 -  avg_test_acc: {'uniform': 0.5231999754905701, 'validclass': 0.5231999754905701, 'labeldist': 0.5232000350952148}
+2024-03-28 14:50:29,623 -  pfl_avg_test_acc: {'uniform': 0.33703999519348143, 'validclass': 0.449358332157135, 'labeldist': 0.7788502871990204}
+2024-03-28 14:50:29,624 - Round:55 - Active clients:[28 92 98 95 84 34 38 76 17 78]:
+2024-03-28 14:50:37,008 -  Training time:7.382 seconds
+2024-03-28 14:50:52,953 -  Testing time:15.933 seconds
+2024-03-28 14:50:52,953 -  avg_test_acc: {'uniform': 0.5583000183105469, 'validclass': 0.5583000183105469, 'labeldist': 0.5583000779151917}
+2024-03-28 14:50:52,954 -  pfl_avg_test_acc: {'uniform': 0.33237999826669695, 'validclass': 0.46271289587020875, 'labeldist': 0.7609461009502411}
+2024-03-28 14:50:52,959 - Round:56 - Active clients:[92 79 23 68 52 38 73  9 59 27]:
+2024-03-28 14:50:59,887 -  Training time:6.926 seconds
+2024-03-28 14:51:14,433 -  Testing time:14.531 seconds
+2024-03-28 14:51:14,433 -  avg_test_acc: {'uniform': 0.5698000192642212, 'validclass': 0.5698000192642212, 'labeldist': 0.5697999596595764}
+2024-03-28 14:51:14,433 -  pfl_avg_test_acc: {'uniform': 0.37234000116586685, 'validclass': 0.4386608362197876, 'labeldist': 0.7652041554450989}
+2024-03-28 14:51:14,438 - Round:57 - Active clients:[52 17 41  3  8 98 59 20 67  7]:
+2024-03-28 14:51:22,625 -  Training time:8.184 seconds
+2024-03-28 14:51:37,584 -  Testing time:14.942 seconds
+2024-03-28 14:51:37,584 -  avg_test_acc: {'uniform': 0.5094000101089478, 'validclass': 0.5094000101089478, 'labeldist': 0.5094000101089478}
+2024-03-28 14:51:37,584 -  pfl_avg_test_acc: {'uniform': 0.35187000781297684, 'validclass': 0.4905572980642319, 'labeldist': 0.7737053453922271}
+2024-03-28 14:51:37,584 - Round:58 - Active clients:[43 58  8 31 70 45 69 95 50  4]:
+2024-03-28 14:51:43,749 -  Training time:6.162 seconds
+2024-03-28 14:51:59,133 -  Testing time:15.369 seconds
+2024-03-28 14:51:59,133 -  avg_test_acc: {'uniform': 0.5746999979019165, 'validclass': 0.5746999979019165, 'labeldist': 0.5746999382972717}
+2024-03-28 14:51:59,133 -  pfl_avg_test_acc: {'uniform': 0.3622899979352951, 'validclass': 0.4569601505994797, 'labeldist': 0.7495070338249207}
+2024-03-28 14:51:59,137 - Round:59 - Active clients:[38 46 24 87 30 85 16 96 18 99]:
+2024-03-28 14:52:05,162 -  Training time:6.022 seconds
+2024-03-28 14:52:19,430 -  Testing time:14.250 seconds
+2024-03-28 14:52:19,431 -  avg_test_acc: {'uniform': 0.5202999711036682, 'validclass': 0.5202999711036682, 'labeldist': 0.5202999711036682}
+2024-03-28 14:52:19,431 -  pfl_avg_test_acc: {'uniform': 0.36177999824285506, 'validclass': 0.5204780548810959, 'labeldist': 0.7689302802085877}
+2024-03-28 14:52:19,431 - Round:60 - Active clients:[88  4 79 14 55  3 19 28 94 25]:
+2024-03-28 14:52:26,095 -  Training time:6.661 seconds
+2024-03-28 14:52:40,539 -  Testing time:14.431 seconds
+2024-03-28 14:52:40,539 -  avg_test_acc: {'uniform': 0.5600000023841858, 'validclass': 0.5600000023841858, 'labeldist': 0.5600000023841858}
+2024-03-28 14:52:40,539 -  pfl_avg_test_acc: {'uniform': 0.35695000290870665, 'validclass': 0.4947261869907379, 'labeldist': 0.7468845784664154}
+2024-03-28 14:52:40,539 - Round:61 - Active clients:[83  1 55  9 31 28 96 29 86 63]:
+2024-03-28 14:52:47,219 -  Training time:6.675 seconds
+2024-03-28 14:53:02,043 -  Testing time:14.814 seconds
+2024-03-28 14:53:02,043 -  avg_test_acc: {'uniform': 0.5873000025749207, 'validclass': 0.5873000025749207, 'labeldist': 0.5873000025749207}
+2024-03-28 14:53:02,044 -  pfl_avg_test_acc: {'uniform': 0.3560800015926361, 'validclass': 0.4897592067718506, 'labeldist': 0.7726635932922363}
+2024-03-28 14:53:02,049 - Round:62 - Active clients:[76 48 62 80 29 99 60 89 39 69]:
+2024-03-28 14:53:08,662 -  Training time:6.611 seconds
+2024-03-28 14:53:23,353 -  Testing time:14.679 seconds
+2024-03-28 14:53:23,354 -  avg_test_acc: {'uniform': 0.5394999980926514, 'validclass': 0.5394999980926514, 'labeldist': 0.5394999980926514}
+2024-03-28 14:53:23,354 -  pfl_avg_test_acc: {'uniform': 0.35737999975681306, 'validclass': 0.579040601849556, 'labeldist': 0.7847636044025421}
+2024-03-28 14:53:23,355 - Round:63 - Active clients:[64 59 63  2 80 20 18 48 72 51]:
+2024-03-28 14:53:31,774 -  Training time:8.417 seconds
+2024-03-28 14:53:47,010 -  Testing time:15.217 seconds
+2024-03-28 14:53:47,011 -  avg_test_acc: {'uniform': 0.46230000257492065, 'validclass': 0.46230000257492065, 'labeldist': 0.46230003237724304}
+2024-03-28 14:53:47,011 -  pfl_avg_test_acc: {'uniform': 0.3009400025010109, 'validclass': 0.6041828542947769, 'labeldist': 0.8475907266139984}
+2024-03-28 14:53:47,012 - Round:64 - Active clients:[17 22 60 92 23 19 71 94 40 49]:
+2024-03-28 14:53:53,503 -  Training time:6.489 seconds
+2024-03-28 14:54:08,329 -  Testing time:14.813 seconds
+2024-03-28 14:54:08,329 -  avg_test_acc: {'uniform': 0.525600016117096, 'validclass': 0.525600016117096, 'labeldist': 0.5255999565124512}
+2024-03-28 14:54:08,329 -  pfl_avg_test_acc: {'uniform': 0.38047999441623687, 'validclass': 0.47676773369312286, 'labeldist': 0.7374315083026886}
+2024-03-28 14:54:08,330 - Round:65 - Active clients:[37 81 39 61 76 90 27 86 28 69]:
+2024-03-28 14:54:15,303 -  Training time:6.971 seconds
+2024-03-28 14:54:30,297 -  Testing time:14.975 seconds
+2024-03-28 14:54:30,298 -  avg_test_acc: {'uniform': 0.5909000039100647, 'validclass': 0.5909000039100647, 'labeldist': 0.5909000039100647}
+2024-03-28 14:54:30,298 -  pfl_avg_test_acc: {'uniform': 0.3794699966907501, 'validclass': 0.48967603147029876, 'labeldist': 0.7863935708999634}
+2024-03-28 14:54:30,303 - Round:66 - Active clients:[ 8 93  4  5 52 41  0 73 88 68]:
+2024-03-28 14:54:37,576 -  Training time:7.271 seconds
+2024-03-28 14:54:52,965 -  Testing time:15.374 seconds
+2024-03-28 14:54:52,965 -  avg_test_acc: {'uniform': 0.5194000005722046, 'validclass': 0.5194000005722046, 'labeldist': 0.5194000005722046}
+2024-03-28 14:54:52,965 -  pfl_avg_test_acc: {'uniform': 0.3285300001502037, 'validclass': 0.5118091255426407, 'labeldist': 0.7897456645965576}
+2024-03-28 14:54:52,966 - Round:67 - Active clients:[17 24 64 93 97 29  3 70 82 11]:
+2024-03-28 14:54:59,828 -  Training time:6.860 seconds
+2024-03-28 14:55:15,221 -  Testing time:15.382 seconds
+2024-03-28 14:55:15,222 -  avg_test_acc: {'uniform': 0.5554999709129333, 'validclass': 0.5554999709129333, 'labeldist': 0.5554999709129333}
+2024-03-28 14:55:15,222 -  pfl_avg_test_acc: {'uniform': 0.3517599955201149, 'validclass': 0.4764764249324799, 'labeldist': 0.7595288634300232}
+2024-03-28 14:55:15,223 - Round:68 - Active clients:[29 30 16  5 38 71 76 94 99 95]:
+2024-03-28 14:55:21,990 -  Training time:6.764 seconds
+2024-03-28 14:55:37,565 -  Testing time:15.564 seconds
+2024-03-28 14:55:37,566 -  avg_test_acc: {'uniform': 0.5637999773025513, 'validclass': 0.5637999773025513, 'labeldist': 0.5637999773025513}
+2024-03-28 14:55:37,566 -  pfl_avg_test_acc: {'uniform': 0.3938900023698807, 'validclass': 0.5308380663394928, 'labeldist': 0.7604387164115906}
+2024-03-28 14:55:37,566 - Round:69 - Active clients:[72 31 13 83 33  8 26 89 64 97]:
+2024-03-28 14:55:45,555 -  Training time:7.985 seconds
+2024-03-28 14:56:02,276 -  Testing time:16.710 seconds
+2024-03-28 14:56:02,277 -  avg_test_acc: {'uniform': 0.5873000025749207, 'validclass': 0.5873000025749207, 'labeldist': 0.5873000025749207}
+2024-03-28 14:56:02,277 -  pfl_avg_test_acc: {'uniform': 0.3952400028705597, 'validclass': 0.5045329332351685, 'labeldist': 0.7406517028808594}
+2024-03-28 14:56:02,277 - Round:70 - Active clients:[81 43 88 32 50 71 73 55 42  2]:
+2024-03-28 14:56:09,526 -  Training time:7.247 seconds
+2024-03-28 14:56:24,939 -  Testing time:15.403 seconds
+2024-03-28 14:56:24,939 -  avg_test_acc: {'uniform': 0.5986999869346619, 'validclass': 0.5986999869346619, 'labeldist': 0.5986999273300171}
+2024-03-28 14:56:24,940 -  pfl_avg_test_acc: {'uniform': 0.36430000364780424, 'validclass': 0.5072289645671845, 'labeldist': 0.7757650315761566}
+2024-03-28 14:56:24,945 - Round:71 - Active clients:[41 84 98 42 75 25 60 19 52 29]:
+2024-03-28 14:56:31,477 -  Training time:6.529 seconds
+2024-03-28 14:56:46,752 -  Testing time:15.264 seconds
+2024-03-28 14:56:46,752 -  avg_test_acc: {'uniform': 0.4722999930381775, 'validclass': 0.4722999930381775, 'labeldist': 0.4723000228404999}
+2024-03-28 14:56:46,753 -  pfl_avg_test_acc: {'uniform': 0.3709099993109703, 'validclass': 0.5273938030004501, 'labeldist': 0.7628536581993103}
+2024-03-28 14:56:46,753 - Round:72 - Active clients:[76 82 43 16 84 95 78 91 30 22]:
+2024-03-28 14:56:53,959 -  Training time:7.204 seconds
+2024-03-28 14:57:09,230 -  Testing time:15.260 seconds
+2024-03-28 14:57:09,230 -  avg_test_acc: {'uniform': 0.5723000168800354, 'validclass': 0.5723000168800354, 'labeldist': 0.5723000168800354}
+2024-03-28 14:57:09,230 -  pfl_avg_test_acc: {'uniform': 0.40120999813079833, 'validclass': 0.5075841665267944, 'labeldist': 0.7801982283592224}
+2024-03-28 14:57:09,231 - Round:73 - Active clients:[49 14 34 70 90 35 68 76 80  9]:
+2024-03-28 14:57:17,805 -  Training time:8.565 seconds
+2024-03-28 14:57:32,576 -  Testing time:14.757 seconds
+2024-03-28 14:57:32,576 -  avg_test_acc: {'uniform': 0.5924999713897705, 'validclass': 0.5924999713897705, 'labeldist': 0.5924999713897705}
+2024-03-28 14:57:32,577 -  pfl_avg_test_acc: {'uniform': 0.3812199980020523, 'validclass': 0.530694916844368, 'labeldist': 0.8073287725448608}
+2024-03-28 14:57:32,577 - Round:74 - Active clients:[85 64 63 80  6 12 43 17  7  8]:
+2024-03-28 14:57:39,351 -  Training time:6.772 seconds
+2024-03-28 14:57:54,084 -  Testing time:14.720 seconds
+2024-03-28 14:57:54,085 -  avg_test_acc: {'uniform': 0.520799994468689, 'validclass': 0.520799994468689, 'labeldist': 0.520799994468689}
+2024-03-28 14:57:54,085 -  pfl_avg_test_acc: {'uniform': 0.3589000031352043, 'validclass': 0.5884776175022125, 'labeldist': 0.8089672207832337}
+2024-03-28 14:57:54,085 - Round:75 - Active clients:[36  7  6 45 56 54 22 37 53 68]:
+2024-03-28 14:58:01,037 -  Training time:6.951 seconds
+2024-03-28 14:58:15,575 -  Testing time:14.524 seconds
+2024-03-28 14:58:15,575 -  avg_test_acc: {'uniform': 0.5393000245094299, 'validclass': 0.5393000245094299, 'labeldist': 0.5392999649047852}
+2024-03-28 14:58:15,575 -  pfl_avg_test_acc: {'uniform': 0.34865000024437903, 'validclass': 0.5313396781682969, 'labeldist': 0.8146984040737152}
+2024-03-28 14:58:15,576 - Round:76 - Active clients:[38 37 32 50 10 94 19 44 86 23]:
+2024-03-28 14:58:21,753 -  Training time:6.174 seconds
+2024-03-28 14:58:36,421 -  Testing time:14.655 seconds
+2024-03-28 14:58:36,421 -  avg_test_acc: {'uniform': 0.5788999795913696, 'validclass': 0.5788999795913696, 'labeldist': 0.5789000391960144}
+2024-03-28 14:58:36,421 -  pfl_avg_test_acc: {'uniform': 0.410929998755455, 'validclass': 0.5182356745004654, 'labeldist': 0.753402179479599}
+2024-03-28 14:58:36,422 - Round:77 - Active clients:[ 5 93 41 96 16 42 81 91 50 58]:
+2024-03-28 14:58:42,914 -  Training time:6.488 seconds
+2024-03-28 14:58:58,023 -  Testing time:15.099 seconds
+2024-03-28 14:58:58,023 -  avg_test_acc: {'uniform': 0.5008000135421753, 'validclass': 0.5008000135421753, 'labeldist': 0.5008000731468201}
+2024-03-28 14:58:58,023 -  pfl_avg_test_acc: {'uniform': 0.3957599997520447, 'validclass': 0.5626712322235108, 'labeldist': 0.7966884851455689}
+2024-03-28 14:58:58,025 - Round:78 - Active clients:[ 9 46  7 63 15  2 74 31  5 36]:
+2024-03-28 14:59:05,857 -  Training time:7.830 seconds
+2024-03-28 14:59:20,648 -  Testing time:14.778 seconds
+2024-03-28 14:59:20,648 -  avg_test_acc: {'uniform': 0.5741000175476074, 'validclass': 0.5741000175476074, 'labeldist': 0.5740999579429626}
+2024-03-28 14:59:20,648 -  pfl_avg_test_acc: {'uniform': 0.36418999582529066, 'validclass': 0.5517132848501205, 'labeldist': 0.8068885803222656}
+2024-03-28 14:59:20,648 - Round:79 - Active clients:[68 18 86 60 56 32 30 24 45 92]:
+2024-03-28 14:59:28,350 -  Training time:7.699 seconds
+2024-03-28 14:59:43,381 -  Testing time:15.012 seconds
+2024-03-28 14:59:43,381 -  avg_test_acc: {'uniform': 0.5080000162124634, 'validclass': 0.5080000162124634, 'labeldist': 0.5080000162124634}
+2024-03-28 14:59:43,381 -  pfl_avg_test_acc: {'uniform': 0.31118999868631364, 'validclass': 0.5846224963665009, 'labeldist': 0.8353563487529755}
+2024-03-28 14:59:43,382 - Round:80 - Active clients:[37 65 95 53 66 30 73 85 45 36]:
+2024-03-28 14:59:50,942 -  Training time:7.558 seconds
+2024-03-28 15:00:06,105 -  Testing time:15.149 seconds
+2024-03-28 15:00:06,105 -  avg_test_acc: {'uniform': 0.5722000002861023, 'validclass': 0.5722000002861023, 'labeldist': 0.5722000002861023}
+2024-03-28 15:00:06,105 -  pfl_avg_test_acc: {'uniform': 0.37240999937057495, 'validclass': 0.5140814304351806, 'labeldist': 0.8019621789455413}
+2024-03-28 15:00:06,106 - Round:81 - Active clients:[73 89 41 78 51 21 30 69  8  5]:
+2024-03-28 15:00:12,164 -  Training time:6.055 seconds
+2024-03-28 15:00:27,285 -  Testing time:15.109 seconds
+2024-03-28 15:00:27,285 -  avg_test_acc: {'uniform': 0.569599986076355, 'validclass': 0.569599986076355, 'labeldist': 0.5696000456809998}
+2024-03-28 15:00:27,285 -  pfl_avg_test_acc: {'uniform': 0.3979599952697754, 'validclass': 0.557564127445221, 'labeldist': 0.7905274152755737}
+2024-03-28 15:00:27,285 - Round:82 - Active clients:[72 33 58  2 55 84 54 75 28 40]:
+2024-03-28 15:00:33,828 -  Training time:6.540 seconds
+2024-03-28 15:00:49,058 -  Testing time:15.219 seconds
+2024-03-28 15:00:49,058 -  avg_test_acc: {'uniform': 0.6065000295639038, 'validclass': 0.6065000295639038, 'labeldist': 0.6065000295639038}
+2024-03-28 15:00:49,058 -  pfl_avg_test_acc: {'uniform': 0.35949999690055845, 'validclass': 0.5135733336210251, 'labeldist': 0.7840871930122375}
+2024-03-28 15:00:49,062 - Round:83 - Active clients:[ 6 65 95 84 61 12 30 69 35  1]:
+2024-03-28 15:00:55,987 -  Training time:6.923 seconds
+2024-03-28 15:01:11,698 -  Testing time:15.701 seconds
+2024-03-28 15:01:11,699 -  avg_test_acc: {'uniform': 0.6283000111579895, 'validclass': 0.6283000111579895, 'labeldist': 0.6283000111579895}
+2024-03-28 15:01:11,699 -  pfl_avg_test_acc: {'uniform': 0.4384299963712692, 'validclass': 0.5237403124570846, 'labeldist': 0.7784408271312714}
+2024-03-28 15:01:11,703 - Round:84 - Active clients:[94 55 80  1 90 11 32  8  6 82]:
+2024-03-28 15:01:20,021 -  Training time:8.314 seconds
+2024-03-28 15:01:33,890 -  Testing time:13.859 seconds
+2024-03-28 15:01:33,890 -  avg_test_acc: {'uniform': 0.5734999775886536, 'validclass': 0.5734999775886536, 'labeldist': 0.5734999775886536}
+2024-03-28 15:01:33,890 -  pfl_avg_test_acc: {'uniform': 0.3930099934339523, 'validclass': 0.5485442042350769, 'labeldist': 0.799073600769043}
+2024-03-28 15:01:33,891 - Round:85 - Active clients:[81 25 40 87 41 23 10 89 50 54]:
+2024-03-28 15:01:38,838 -  Training time:4.945 seconds
+2024-03-28 15:01:50,450 -  Testing time:11.599 seconds
+2024-03-28 15:01:50,450 -  avg_test_acc: {'uniform': 0.5943999886512756, 'validclass': 0.5943999886512756, 'labeldist': 0.5944000482559204}
+2024-03-28 15:01:50,450 -  pfl_avg_test_acc: {'uniform': 0.40044000595808027, 'validclass': 0.570605555176735, 'labeldist': 0.7737427532672883}
+2024-03-28 15:01:50,450 - Round:86 - Active clients:[69 74 34 68 42  0 32 88  8  3]:
+2024-03-28 15:01:56,528 -  Training time:6.076 seconds
+2024-03-28 15:02:09,273 -  Testing time:12.733 seconds
+2024-03-28 15:02:09,273 -  avg_test_acc: {'uniform': 0.5511000156402588, 'validclass': 0.5511000156402588, 'labeldist': 0.5511000156402588}
+2024-03-28 15:02:09,273 -  pfl_avg_test_acc: {'uniform': 0.35587000101804733, 'validclass': 0.5256551951169968, 'labeldist': 0.8082570493221283}
+2024-03-28 15:02:09,274 - Round:87 - Active clients:[16 81 85 32 39 25 26 29 65  7]:
+2024-03-28 15:02:15,091 -  Training time:5.814 seconds
+2024-03-28 15:02:27,672 -  Testing time:12.570 seconds
+2024-03-28 15:02:27,672 -  avg_test_acc: {'uniform': 0.6241000294685364, 'validclass': 0.6241000294685364, 'labeldist': 0.6240999698638916}
+2024-03-28 15:02:27,673 -  pfl_avg_test_acc: {'uniform': 0.3680299997329712, 'validclass': 0.5367303520441056, 'labeldist': 0.7997783958911896}
+2024-03-28 15:02:27,673 - Round:88 - Active clients:[95 53 43 84  2 74 55 31 54 97]:
+2024-03-28 15:02:33,992 -  Training time:6.318 seconds
+2024-03-28 15:02:46,749 -  Testing time:12.746 seconds
+2024-03-28 15:02:46,749 -  avg_test_acc: {'uniform': 0.6118000149726868, 'validclass': 0.6118000149726868, 'labeldist': 0.6118000149726868}
+2024-03-28 15:02:46,749 -  pfl_avg_test_acc: {'uniform': 0.4186599999666214, 'validclass': 0.5648021697998047, 'labeldist': 0.7820075392723084}
+2024-03-28 15:02:46,750 - Round:89 - Active clients:[65 21 87  6 46 74 44 60 72  5]:
+2024-03-28 15:02:52,106 -  Training time:5.353 seconds
+2024-03-28 15:03:04,528 -  Testing time:12.412 seconds
+2024-03-28 15:03:04,528 -  avg_test_acc: {'uniform': 0.6262999773025513, 'validclass': 0.6262999773025513, 'labeldist': 0.6262999773025513}
+2024-03-28 15:03:04,529 -  pfl_avg_test_acc: {'uniform': 0.42159000039100647, 'validclass': 0.5768182545900344, 'labeldist': 0.8029930710792541}
+2024-03-28 15:03:04,529 - Round:90 - Active clients:[25 85 96 89 65 94  5 35 36 92]:
+2024-03-28 15:03:11,265 -  Training time:6.733 seconds
+2024-03-28 15:03:23,958 -  Testing time:12.678 seconds
+2024-03-28 15:03:23,958 -  avg_test_acc: {'uniform': 0.618399977684021, 'validclass': 0.618399977684021, 'labeldist': 0.6184000372886658}
+2024-03-28 15:03:23,958 -  pfl_avg_test_acc: {'uniform': 0.4008799970149994, 'validclass': 0.5969352811574936, 'labeldist': 0.8226034939289093}
+2024-03-28 15:03:23,958 - Round:91 - Active clients:[75 25  3 52 78 54 59 26 62 97]:
+2024-03-28 15:03:29,602 -  Training time:5.641 seconds
+2024-03-28 15:03:42,442 -  Testing time:12.830 seconds
+2024-03-28 15:03:42,442 -  avg_test_acc: {'uniform': 0.6049000024795532, 'validclass': 0.6049000024795532, 'labeldist': 0.6049000024795532}
+2024-03-28 15:03:42,443 -  pfl_avg_test_acc: {'uniform': 0.39593999832868576, 'validclass': 0.5387222349643708, 'labeldist': 0.7826706528663635}
+2024-03-28 15:03:42,443 - Round:92 - Active clients:[25 99 73 61 66 36 23 83 77  6]:
+2024-03-28 15:03:46,416 -  Training time:3.971 seconds
+2024-03-28 15:03:59,229 -  Testing time:12.800 seconds
+2024-03-28 15:03:59,229 -  avg_test_acc: {'uniform': 0.6072999835014343, 'validclass': 0.6072999835014343, 'labeldist': 0.6072999835014343}
+2024-03-28 15:03:59,229 -  pfl_avg_test_acc: {'uniform': 0.43408000469207764, 'validclass': 0.5647315859794617, 'labeldist': 0.7706024646759033}
+2024-03-28 15:03:59,230 - Round:93 - Active clients:[75 82 56 27 42 35  1 97 66 61]:
+2024-03-28 15:04:05,180 -  Training time:5.948 seconds
+2024-03-28 15:04:17,814 -  Testing time:12.623 seconds
+2024-03-28 15:04:17,815 -  avg_test_acc: {'uniform': 0.5929999947547913, 'validclass': 0.5929999947547913, 'labeldist': 0.5929999947547913}
+2024-03-28 15:04:17,815 -  pfl_avg_test_acc: {'uniform': 0.41609000265598295, 'validclass': 0.5487469434738159, 'labeldist': 0.8157593667507171}
+2024-03-28 15:04:17,815 - Round:94 - Active clients:[13 73  5 18 99 48 23  4 35 17]:
+2024-03-28 15:04:23,811 -  Training time:5.994 seconds
+2024-03-28 15:04:35,190 -  Testing time:11.367 seconds
+2024-03-28 15:04:35,190 -  avg_test_acc: {'uniform': 0.6033999919891357, 'validclass': 0.6033999919891357, 'labeldist': 0.6033999919891357}
+2024-03-28 15:04:35,190 -  pfl_avg_test_acc: {'uniform': 0.4195700019598007, 'validclass': 0.6201345980167389, 'labeldist': 0.8125105977058411}
+2024-03-28 15:04:35,191 - Round:95 - Active clients:[88  9  1 60 95 26 45 71 44 21]:
+2024-03-28 15:04:41,606 -  Training time:6.412 seconds
+2024-03-28 15:04:54,193 -  Testing time:12.576 seconds
+2024-03-28 15:04:54,193 -  avg_test_acc: {'uniform': 0.608299970626831, 'validclass': 0.608299970626831, 'labeldist': 0.608299970626831}
+2024-03-28 15:04:54,193 -  pfl_avg_test_acc: {'uniform': 0.42219999730587005, 'validclass': 0.5519865542650223, 'labeldist': 0.7774545907974243}
+2024-03-28 15:04:54,193 - Round:96 - Active clients:[41 28 52 15 87 17 75 42 45 49]:
+2024-03-28 15:04:58,786 -  Training time:4.591 seconds
+2024-03-28 15:05:10,539 -  Testing time:11.737 seconds
+2024-03-28 15:05:10,540 -  avg_test_acc: {'uniform': 0.6424000263214111, 'validclass': 0.6424000263214111, 'labeldist': 0.6423999667167664}
+2024-03-28 15:05:10,540 -  pfl_avg_test_acc: {'uniform': 0.4241800010204315, 'validclass': 0.5293064266443253, 'labeldist': 0.8067142069339752}
+2024-03-28 15:05:10,545 - Round:97 - Active clients:[31 43 64 56 85  2 70 21 34 50]:
+2024-03-28 15:05:16,837 -  Training time:6.289 seconds
+2024-03-28 15:05:28,645 -  Testing time:11.793 seconds
+2024-03-28 15:05:28,645 -  avg_test_acc: {'uniform': 0.6133999824523926, 'validclass': 0.6133999824523926, 'labeldist': 0.6134000420570374}
+2024-03-28 15:05:28,645 -  pfl_avg_test_acc: {'uniform': 0.417220002412796, 'validclass': 0.5689803630113601, 'labeldist': 0.7943636119365692}
+2024-03-28 15:05:28,646 - Round:98 - Active clients:[11 48 97 14 22 36 99 47 33 81]:
+2024-03-28 15:05:35,362 -  Training time:6.714 seconds
+2024-03-28 15:05:48,200 -  Testing time:12.828 seconds
+2024-03-28 15:05:48,200 -  avg_test_acc: {'uniform': 0.6133000254631042, 'validclass': 0.6133000254631042, 'labeldist': 0.6133000254631042}
+2024-03-28 15:05:48,200 -  pfl_avg_test_acc: {'uniform': 0.40181000381708143, 'validclass': 0.5503169447183609, 'labeldist': 0.8110418260097504}
+2024-03-28 15:05:48,201 - Round:99 - Active clients:[14 34 30 78 16 15 91 38 10 85]:
+2024-03-28 15:05:53,993 -  Training time:5.790 seconds
+2024-03-28 15:06:06,812 -  Testing time:12.808 seconds
+2024-03-28 15:06:06,812 -  avg_test_acc: {'uniform': 0.645799994468689, 'validclass': 0.645799994468689, 'labeldist': 0.6458000540733337}
+2024-03-28 15:06:06,812 -  pfl_avg_test_acc: {'uniform': 0.44463999569416046, 'validclass': 0.5877167463302613, 'labeldist': 0.7979772806167602}
+2024-03-28 15:06:06,816 - Round:100 - Active clients:[37 62 26 41 35 25 36 33 77 21]:
+2024-03-28 15:06:13,354 -  Training time:6.535 seconds
+2024-03-28 15:06:26,081 -  Testing time:12.708 seconds
+2024-03-28 15:06:26,082 -  avg_test_acc: {'uniform': 0.6036999821662903, 'validclass': 0.6036999821662903, 'labeldist': 0.6037000417709351}
+2024-03-28 15:06:26,082 -  pfl_avg_test_acc: {'uniform': 0.4191600024700165, 'validclass': 0.5838934421539307, 'labeldist': 0.7984094679355621}
+2024-03-28 15:06:26,082 - Round:101 - Active clients:[16  1 43 67 89 21 97 51  6 41]:
+2024-03-28 15:06:32,230 -  Training time:6.147 seconds
+2024-03-28 15:06:44,933 -  Testing time:12.691 seconds
+2024-03-28 15:06:44,933 -  avg_test_acc: {'uniform': 0.6395999789237976, 'validclass': 0.6395999789237976, 'labeldist': 0.6395999789237976}
+2024-03-28 15:06:44,933 -  pfl_avg_test_acc: {'uniform': 0.43574999570846557, 'validclass': 0.5831660687923431, 'labeldist': 0.8166279077529908}
+2024-03-28 15:06:44,934 - Round:102 - Active clients:[98 46 97 21 44 33 75 65 83 15]:
+2024-03-28 15:06:50,791 -  Training time:5.854 seconds
+2024-03-28 15:07:03,454 -  Testing time:12.652 seconds
+2024-03-28 15:07:03,454 -  avg_test_acc: {'uniform': 0.6148999929428101, 'validclass': 0.6148999929428101, 'labeldist': 0.6148999929428101}
+2024-03-28 15:07:03,455 -  pfl_avg_test_acc: {'uniform': 0.43375999927520753, 'validclass': 0.4919969022274017, 'labeldist': 0.7950231671333313}
+2024-03-28 15:07:03,455 - Round:103 - Active clients:[79 92 25 64 97 61 50 76 99 42]:
+2024-03-28 15:07:09,198 -  Training time:5.741 seconds
+2024-03-28 15:07:21,890 -  Testing time:12.682 seconds
+2024-03-28 15:07:21,891 -  avg_test_acc: {'uniform': 0.5766000151634216, 'validclass': 0.5766000151634216, 'labeldist': 0.5765999555587769}
+2024-03-28 15:07:21,891 -  pfl_avg_test_acc: {'uniform': 0.4222900003194809, 'validclass': 0.5913888841867447, 'labeldist': 0.7755871832370758}
+2024-03-28 15:07:21,891 - Round:104 - Active clients:[23  2 22 27 53 84 56 98 72 57]:
+2024-03-28 15:07:27,670 -  Training time:5.776 seconds
+2024-03-28 15:07:40,515 -  Testing time:12.836 seconds
+2024-03-28 15:07:40,516 -  avg_test_acc: {'uniform': 0.6449000239372253, 'validclass': 0.6449000239372253, 'labeldist': 0.6448999643325806}
+2024-03-28 15:07:40,516 -  pfl_avg_test_acc: {'uniform': 0.4449900060892105, 'validclass': 0.5753114283084869, 'labeldist': 0.781016618013382}
+2024-03-28 15:07:40,516 - Round:105 - Active clients:[52 26 40 89 90 85  3 87 63 92]:
+2024-03-28 15:07:47,500 -  Training time:6.982 seconds
+2024-03-28 15:08:00,192 -  Testing time:12.679 seconds
+2024-03-28 15:08:00,192 -  avg_test_acc: {'uniform': 0.6227999925613403, 'validclass': 0.6227999925613403, 'labeldist': 0.6228000521659851}
+2024-03-28 15:08:00,192 -  pfl_avg_test_acc: {'uniform': 0.43600999712944033, 'validclass': 0.6006644427776336, 'labeldist': 0.7844174921512603}
+2024-03-28 15:08:00,193 - Round:106 - Active clients:[28  4 98 49  1 50 72 38 46 79]:
+2024-03-28 15:08:04,685 -  Training time:4.490 seconds
+2024-03-28 15:08:16,546 -  Testing time:11.850 seconds
+2024-03-28 15:08:16,546 -  avg_test_acc: {'uniform': 0.654699981212616, 'validclass': 0.654699981212616, 'labeldist': 0.6547000408172607}
+2024-03-28 15:08:16,546 -  pfl_avg_test_acc: {'uniform': 0.45427999794483187, 'validclass': 0.5266168296337128, 'labeldist': 0.7946672737598419}
+2024-03-28 15:08:16,551 - Round:107 - Active clients:[35 46  1 32 90 77 10 87 69 84]:
+2024-03-28 15:08:22,599 -  Training time:6.044 seconds
+2024-03-28 15:08:35,425 -  Testing time:12.816 seconds
+2024-03-28 15:08:35,426 -  avg_test_acc: {'uniform': 0.6694999933242798, 'validclass': 0.6694999933242798, 'labeldist': 0.6694999933242798}
+2024-03-28 15:08:35,426 -  pfl_avg_test_acc: {'uniform': 0.45167000889778136, 'validclass': 0.5877375334501267, 'labeldist': 0.8050031781196594}
+2024-03-28 15:08:35,430 - Round:108 - Active clients:[59 12 21 16 72 29 58 73 34 13]:
+2024-03-28 15:08:40,588 -  Training time:5.155 seconds
+2024-03-28 15:08:53,638 -  Testing time:13.035 seconds
+2024-03-28 15:08:53,638 -  avg_test_acc: {'uniform': 0.6622999906539917, 'validclass': 0.6622999906539917, 'labeldist': 0.6623000502586365}
+2024-03-28 15:08:53,638 -  pfl_avg_test_acc: {'uniform': 0.4498100012540817, 'validclass': 0.5219026893377304, 'labeldist': 0.8046784460544586}
+2024-03-28 15:08:53,639 - Round:109 - Active clients:[70 61 90 68 91 87 86 20 49 67]:
+2024-03-28 15:09:00,049 -  Training time:6.406 seconds
+2024-03-28 15:09:12,848 -  Testing time:12.788 seconds
+2024-03-28 15:09:12,848 -  avg_test_acc: {'uniform': 0.6399999856948853, 'validclass': 0.6399999856948853, 'labeldist': 0.64000004529953}
+2024-03-28 15:09:12,848 -  pfl_avg_test_acc: {'uniform': 0.4257199987769127, 'validclass': 0.5569845229387284, 'labeldist': 0.8225215256214142}
+2024-03-28 15:09:12,848 - Round:110 - Active clients:[14 88 71 30 75 63 24 87 98 19]:
+2024-03-28 15:09:18,671 -  Training time:5.822 seconds
+2024-03-28 15:09:31,336 -  Testing time:12.651 seconds
+2024-03-28 15:09:31,336 -  avg_test_acc: {'uniform': 0.6450999975204468, 'validclass': 0.6450999975204468, 'labeldist': 0.6450999975204468}
+2024-03-28 15:09:31,336 -  pfl_avg_test_acc: {'uniform': 0.436379998922348, 'validclass': 0.5813907831907272, 'labeldist': 0.7970901012420655}
+2024-03-28 15:09:31,336 - Round:111 - Active clients:[15 53 44 16 90 20 89 91 92 36]:
+2024-03-28 15:09:38,288 -  Training time:6.950 seconds
+2024-03-28 15:09:51,137 -  Testing time:12.837 seconds
+2024-03-28 15:09:51,138 -  avg_test_acc: {'uniform': 0.6503999829292297, 'validclass': 0.6503999829292297, 'labeldist': 0.6504000425338745}
+2024-03-28 15:09:51,138 -  pfl_avg_test_acc: {'uniform': 0.4810399949550629, 'validclass': 0.577522337436676, 'labeldist': 0.8069939255714417}
+2024-03-28 15:09:51,138 - Round:112 - Active clients:[ 0 64 55 36 33 45 73 84 56 80]:
+2024-03-28 15:09:56,561 -  Training time:5.420 seconds
+2024-03-28 15:10:09,423 -  Testing time:12.849 seconds
+2024-03-28 15:10:09,424 -  avg_test_acc: {'uniform': 0.5033000111579895, 'validclass': 0.5033000111579895, 'labeldist': 0.5033000111579895}
+2024-03-28 15:10:09,424 -  pfl_avg_test_acc: {'uniform': 0.38192000091075895, 'validclass': 0.619805759191513, 'labeldist': 0.8121936202049256}
+2024-03-28 15:10:09,424 - Round:113 - Active clients:[76 53 98 13 52 38 94 43 20 48]:
+2024-03-28 15:10:16,160 -  Training time:6.733 seconds
+2024-03-28 15:10:28,852 -  Testing time:12.680 seconds
+2024-03-28 15:10:28,853 -  avg_test_acc: {'uniform': 0.5669999718666077, 'validclass': 0.5669999718666077, 'labeldist': 0.5670000314712524}
+2024-03-28 15:10:28,853 -  pfl_avg_test_acc: {'uniform': 0.431750001013279, 'validclass': 0.5532170981168747, 'labeldist': 0.8089633762836457}
+2024-03-28 15:10:28,853 - Round:114 - Active clients:[83 65 93 90 24  8 36 16 85 25]:
+2024-03-28 15:10:34,975 -  Training time:6.121 seconds
+2024-03-28 15:10:47,701 -  Testing time:12.713 seconds
+2024-03-28 15:10:47,702 -  avg_test_acc: {'uniform': 0.5522000193595886, 'validclass': 0.5522000193595886, 'labeldist': 0.5522000193595886}
+2024-03-28 15:10:47,702 -  pfl_avg_test_acc: {'uniform': 0.42193999886512756, 'validclass': 0.6172270238399505, 'labeldist': 0.8129091382026672}
+2024-03-28 15:10:47,702 - Round:115 - Active clients:[78 96 25 26 59 71 42 15 35 73]:
+2024-03-28 15:10:53,147 -  Training time:5.442 seconds
+2024-03-28 15:11:05,796 -  Testing time:12.629 seconds
+2024-03-28 15:11:05,796 -  avg_test_acc: {'uniform': 0.6549000144004822, 'validclass': 0.6549000144004822, 'labeldist': 0.6549000144004822}
+2024-03-28 15:11:05,796 -  pfl_avg_test_acc: {'uniform': 0.43644999861717226, 'validclass': 0.5892009615898133, 'labeldist': 0.8010929882526397}
+2024-03-28 15:11:05,797 - Round:116 - Active clients:[38 69  7 33 15 78 20 34 56 32]:
+2024-03-28 15:11:11,658 -  Training time:5.858 seconds
+2024-03-28 15:11:24,250 -  Testing time:12.582 seconds
+2024-03-28 15:11:24,251 -  avg_test_acc: {'uniform': 0.6236000061035156, 'validclass': 0.6236000061035156, 'labeldist': 0.6235999464988708}
+2024-03-28 15:11:24,251 -  pfl_avg_test_acc: {'uniform': 0.4514699995517731, 'validclass': 0.5876814246177673, 'labeldist': 0.8244875192642211}
+2024-03-28 15:11:24,252 - Round:117 - Active clients:[64 91 65 47 60  1  5 29 74 70]:
+2024-03-28 15:11:30,541 -  Training time:6.286 seconds
+2024-03-28 15:11:43,409 -  Testing time:12.852 seconds
+2024-03-28 15:11:43,409 -  avg_test_acc: {'uniform': 0.6154999732971191, 'validclass': 0.6154999732971191, 'labeldist': 0.6154999732971191}
+2024-03-28 15:11:43,409 -  pfl_avg_test_acc: {'uniform': 0.43321000039577484, 'validclass': 0.584261903166771, 'labeldist': 0.8063481330871582}
+2024-03-28 15:11:43,410 - Round:118 - Active clients:[ 4 32 41 78 82 16 13 58 66 92]:
+2024-03-28 15:11:49,268 -  Training time:5.856 seconds
+2024-03-28 15:12:02,249 -  Testing time:12.967 seconds
+2024-03-28 15:12:02,249 -  avg_test_acc: {'uniform': 0.6597999930381775, 'validclass': 0.6597999930381775, 'labeldist': 0.6598000526428223}
+2024-03-28 15:12:02,249 -  pfl_avg_test_acc: {'uniform': 0.444879999756813, 'validclass': 0.5582123875617981, 'labeldist': 0.8317359089851379}
+2024-03-28 15:12:02,249 - Round:119 - Active clients:[53 20  7 13 51 31  0 79 82 75]:
+2024-03-28 15:12:08,808 -  Training time:6.556 seconds
+2024-03-28 15:12:21,985 -  Testing time:13.162 seconds
+2024-03-28 15:12:21,987 -  avg_test_acc: {'uniform': 0.6434000134468079, 'validclass': 0.6434000134468079, 'labeldist': 0.6433999538421631}
+2024-03-28 15:12:21,987 -  pfl_avg_test_acc: {'uniform': 0.45643998980522155, 'validclass': 0.5285896003246308, 'labeldist': 0.8358389377593994}
+2024-03-28 15:12:21,987 - Round:120 - Active clients:[80 38  5 61 93 66 41 65  3 72]:
+2024-03-28 15:12:27,947 -  Training time:5.957 seconds
+2024-03-28 15:12:40,800 -  Testing time:12.844 seconds
+2024-03-28 15:12:40,800 -  avg_test_acc: {'uniform': 0.6205999851226807, 'validclass': 0.6205999851226807, 'labeldist': 0.6205999851226807}
+2024-03-28 15:12:40,800 -  pfl_avg_test_acc: {'uniform': 0.4336299985647202, 'validclass': 0.6474769055843353, 'labeldist': 0.8139206528663635}
+2024-03-28 15:12:40,800 - Round:121 - Active clients:[82 38 23 98 18 22 20 15 97 29]:
+2024-03-28 15:12:46,059 -  Training time:5.255 seconds
+2024-03-28 15:13:00,226 -  Testing time:14.157 seconds
+2024-03-28 15:13:00,227 -  avg_test_acc: {'uniform': 0.6565999984741211, 'validclass': 0.6565999984741211, 'labeldist': 0.6566000580787659}
+2024-03-28 15:13:00,227 -  pfl_avg_test_acc: {'uniform': 0.4610200017690659, 'validclass': 0.5735590070486069, 'labeldist': 0.8217141687870025}
+2024-03-28 15:13:00,228 - Round:122 - Active clients:[49 96  3 34 17 85 53 27 37 90]:
+2024-03-28 15:13:07,398 -  Training time:7.164 seconds
+2024-03-28 15:13:19,520 -  Testing time:12.111 seconds
+2024-03-28 15:13:19,521 -  avg_test_acc: {'uniform': 0.67330002784729, 'validclass': 0.67330002784729, 'labeldist': 0.67330002784729}
+2024-03-28 15:13:19,521 -  pfl_avg_test_acc: {'uniform': 0.48929000794887545, 'validclass': 0.5698592126369476, 'labeldist': 0.8222733438014984}
+2024-03-28 15:13:19,526 - Round:123 - Active clients:[ 8 70 82 28 63  0  5 50 81  4]:
+2024-03-28 15:13:24,058 -  Training time:4.530 seconds
+2024-03-28 15:13:36,750 -  Testing time:12.682 seconds
+2024-03-28 15:13:36,750 -  avg_test_acc: {'uniform': 0.6661999821662903, 'validclass': 0.6661999821662903, 'labeldist': 0.6661999225616455}
+2024-03-28 15:13:36,750 -  pfl_avg_test_acc: {'uniform': 0.4159999996423721, 'validclass': 0.5928067833185195, 'labeldist': 0.8291646897792816}
+2024-03-28 15:13:36,751 - Round:124 - Active clients:[35 34 27 23 61 77 13 88 10 56]:
+2024-03-28 15:13:43,507 -  Training time:6.754 seconds
+2024-03-28 15:13:56,389 -  Testing time:12.871 seconds
+2024-03-28 15:13:56,390 -  avg_test_acc: {'uniform': 0.6621999740600586, 'validclass': 0.6621999740600586, 'labeldist': 0.6622000336647034}
+2024-03-28 15:13:56,390 -  pfl_avg_test_acc: {'uniform': 0.4643899977207184, 'validclass': 0.5998526275157928, 'labeldist': 0.8115215480327607}
+2024-03-28 15:13:56,390 - Round:125 - Active clients:[65  2 49  6 83 73 33  8 54 48]:
+2024-03-28 15:14:01,909 -  Training time:5.517 seconds
+2024-03-28 15:14:14,543 -  Testing time:12.621 seconds
+2024-03-28 15:14:14,543 -  avg_test_acc: {'uniform': 0.6176000237464905, 'validclass': 0.6176000237464905, 'labeldist': 0.6175999641418457}
+2024-03-28 15:14:14,543 -  pfl_avg_test_acc: {'uniform': 0.44540999829769135, 'validclass': 0.5961336046457291, 'labeldist': 0.8267347514629364}
+2024-03-28 15:14:14,544 - Round:126 - Active clients:[13 18 88 63 37 43 20  0 47  5]:
+2024-03-28 15:14:22,084 -  Training time:7.539 seconds
+2024-03-28 15:14:34,781 -  Testing time:12.687 seconds
+2024-03-28 15:14:34,781 -  avg_test_acc: {'uniform': 0.5713000297546387, 'validclass': 0.5713000297546387, 'labeldist': 0.5712999701499939}
+2024-03-28 15:14:34,781 -  pfl_avg_test_acc: {'uniform': 0.38904999643564225, 'validclass': 0.6451695203781128, 'labeldist': 0.848895275592804}
+2024-03-28 15:14:34,782 - Round:127 - Active clients:[17 10 86 24 75 48 40 41  6 85]:
+2024-03-28 15:14:40,794 -  Training time:6.009 seconds
+2024-03-28 15:14:52,633 -  Testing time:11.826 seconds
+2024-03-28 15:14:52,634 -  avg_test_acc: {'uniform': 0.6352999806404114, 'validclass': 0.6352999806404114, 'labeldist': 0.6352999806404114}
+2024-03-28 15:14:52,634 -  pfl_avg_test_acc: {'uniform': 0.4202800005674362, 'validclass': 0.5956159889698028, 'labeldist': 0.8266735017299652}
+2024-03-28 15:14:52,634 - Round:128 - Active clients:[65 67 33 18 13 31 24 38 32 41]:
+2024-03-28 15:14:59,228 -  Training time:6.591 seconds
+2024-03-28 15:15:11,696 -  Testing time:12.457 seconds
+2024-03-28 15:15:11,697 -  avg_test_acc: {'uniform': 0.6276999711990356, 'validclass': 0.6276999711990356, 'labeldist': 0.6277000308036804}
+2024-03-28 15:15:11,697 -  pfl_avg_test_acc: {'uniform': 0.43781999945640565, 'validclass': 0.6431500136852264, 'labeldist': 0.8404965043067932}
+2024-03-28 15:15:11,697 - Round:129 - Active clients:[65 68 59  9 38 67 41 97 37 18]:
+2024-03-28 15:15:18,293 -  Training time:6.590 seconds
+2024-03-28 15:15:30,970 -  Testing time:12.665 seconds
+2024-03-28 15:15:30,970 -  avg_test_acc: {'uniform': 0.6394000053405762, 'validclass': 0.6394000053405762, 'labeldist': 0.6394000053405762}
+2024-03-28 15:15:30,971 -  pfl_avg_test_acc: {'uniform': 0.41370999813079834, 'validclass': 0.59845729470253, 'labeldist': 0.8684595823287964}
+2024-03-28 15:15:30,971 - Round:130 - Active clients:[43 93 41  3 42  6 97 53 73 49]:
+2024-03-28 15:15:36,383 -  Training time:5.408 seconds
+2024-03-28 15:15:49,229 -  Testing time:12.834 seconds
+2024-03-28 15:15:49,229 -  avg_test_acc: {'uniform': 0.6668000221252441, 'validclass': 0.6668000221252441, 'labeldist': 0.6667999625205994}
+2024-03-28 15:15:49,230 -  pfl_avg_test_acc: {'uniform': 0.4804199904203415, 'validclass': 0.5955813944339752, 'labeldist': 0.8049452424049377}
+2024-03-28 15:15:49,230 - Round:131 - Active clients:[58 91 28 46 13  2 34 49 81 23]:
+2024-03-28 15:15:54,681 -  Training time:5.449 seconds
+2024-03-28 15:16:07,446 -  Testing time:12.753 seconds
+2024-03-28 15:16:07,447 -  avg_test_acc: {'uniform': 0.6823999881744385, 'validclass': 0.6823999881744385, 'labeldist': 0.6824000477790833}
+2024-03-28 15:16:07,447 -  pfl_avg_test_acc: {'uniform': 0.46896999776363374, 'validclass': 0.5411021023988724, 'labeldist': 0.8305954277515412}
+2024-03-28 15:16:07,451 - Round:132 - Active clients:[65  2 27 95  8 16 15 92 85 79]:
+2024-03-28 15:16:14,188 -  Training time:6.733 seconds
+2024-03-28 15:16:26,920 -  Testing time:12.720 seconds
+2024-03-28 15:16:26,920 -  avg_test_acc: {'uniform': 0.6510000228881836, 'validclass': 0.6510000228881836, 'labeldist': 0.6510000824928284}
+2024-03-28 15:16:26,920 -  pfl_avg_test_acc: {'uniform': 0.4800300121307373, 'validclass': 0.5910455226898194, 'labeldist': 0.8190692365169525}
+2024-03-28 15:16:26,920 - Round:133 - Active clients:[96 46 15 71 80 11  0 37 67 27]:
+2024-03-28 15:16:33,403 -  Training time:6.480 seconds
+2024-03-28 15:16:46,200 -  Testing time:12.785 seconds
+2024-03-28 15:16:46,200 -  avg_test_acc: {'uniform': 0.6438999772071838, 'validclass': 0.6438999772071838, 'labeldist': 0.6439000368118286}
+2024-03-28 15:16:46,200 -  pfl_avg_test_acc: {'uniform': 0.40977000147104264, 'validclass': 0.6262252300977706, 'labeldist': 0.8384888112545014}
+2024-03-28 15:16:46,201 - Round:134 - Active clients:[39 45 78 25 90 98 48 47 72 66]:
+2024-03-28 15:16:52,284 -  Training time:6.080 seconds
+2024-03-28 15:17:05,153 -  Testing time:12.854 seconds
+2024-03-28 15:17:05,154 -  avg_test_acc: {'uniform': 0.6840000152587891, 'validclass': 0.6840000152587891, 'labeldist': 0.6840000152587891}
+2024-03-28 15:17:05,154 -  pfl_avg_test_acc: {'uniform': 0.41917999982833865, 'validclass': 0.635106110572815, 'labeldist': 0.8468677282333374}
+2024-03-28 15:17:05,159 - Round:135 - Active clients:[24 32 82 20 94 30 54 15 46 51]:
+2024-03-28 15:17:11,478 -  Training time:6.316 seconds
+2024-03-28 15:17:24,454 -  Testing time:12.967 seconds
+2024-03-28 15:17:24,455 -  avg_test_acc: {'uniform': 0.6626999974250793, 'validclass': 0.6626999974250793, 'labeldist': 0.6626999974250793}
+2024-03-28 15:17:24,455 -  pfl_avg_test_acc: {'uniform': 0.446069997549057, 'validclass': 0.5983501166105271, 'labeldist': 0.841434383392334}
+2024-03-28 15:17:24,455 - Round:136 - Active clients:[16 55 28 84 49 99 86 67 87 53]:
+2024-03-28 15:17:29,592 -  Training time:5.134 seconds
+2024-03-28 15:17:42,358 -  Testing time:12.755 seconds
+2024-03-28 15:17:42,358 -  avg_test_acc: {'uniform': 0.6646000146865845, 'validclass': 0.6646000146865845, 'labeldist': 0.6646000146865845}
+2024-03-28 15:17:42,359 -  pfl_avg_test_acc: {'uniform': 0.481700000166893, 'validclass': 0.6266627788543702, 'labeldist': 0.7940062642097473}
+2024-03-28 15:17:42,360 - Round:137 - Active clients:[88 73 90 93 87 13  0 53 18 20]:
+2024-03-28 15:17:49,068 -  Training time:6.706 seconds
+2024-03-28 15:18:01,997 -  Testing time:12.916 seconds
+2024-03-28 15:18:01,997 -  avg_test_acc: {'uniform': 0.6560999751091003, 'validclass': 0.6560999751091003, 'labeldist': 0.6561000347137451}
+2024-03-28 15:18:01,997 -  pfl_avg_test_acc: {'uniform': 0.4522599965333939, 'validclass': 0.6142775267362595, 'labeldist': 0.8331788301467895}
+2024-03-28 15:18:01,998 - Round:138 - Active clients:[74 23 41 55  8 44 12 97 88 45]:
+2024-03-28 15:18:07,576 -  Training time:5.573 seconds
+2024-03-28 15:18:20,333 -  Testing time:12.739 seconds
+2024-03-28 15:18:20,333 -  avg_test_acc: {'uniform': 0.6280999779701233, 'validclass': 0.6280999779701233, 'labeldist': 0.6280999779701233}
+2024-03-28 15:18:20,333 -  pfl_avg_test_acc: {'uniform': 0.4737700015306473, 'validclass': 0.5867110013961792, 'labeldist': 0.8275997638702393}
+2024-03-28 15:18:20,333 - Round:139 - Active clients:[52 82 14  7 40 45 23 39 74 68]:
+2024-03-28 15:18:25,853 -  Training time:5.516 seconds
+2024-03-28 15:18:38,624 -  Testing time:12.750 seconds
+2024-03-28 15:18:38,624 -  avg_test_acc: {'uniform': 0.6456999778747559, 'validclass': 0.6456999778747559, 'labeldist': 0.6457000970840454}
+2024-03-28 15:18:38,624 -  pfl_avg_test_acc: {'uniform': 0.46263000667095183, 'validclass': 0.5824458658695221, 'labeldist': 0.8413695514202117}
+2024-03-28 15:18:38,624 - Round:140 - Active clients:[64  9 98 29 60 39  1 43 90 42]:
+2024-03-28 15:18:44,951 -  Training time:6.324 seconds
+2024-03-28 15:18:57,595 -  Testing time:12.635 seconds
+2024-03-28 15:18:57,596 -  avg_test_acc: {'uniform': 0.6725999712944031, 'validclass': 0.6725999712944031, 'labeldist': 0.6726000308990479}
+2024-03-28 15:18:57,596 -  pfl_avg_test_acc: {'uniform': 0.4754699945449829, 'validclass': 0.5993301630020141, 'labeldist': 0.8111101448535919}
+2024-03-28 15:18:57,596 - Round:141 - Active clients:[46  1 51 10 96 87 15 73 20 41]:
+2024-03-28 15:19:03,553 -  Training time:5.955 seconds
+2024-03-28 15:19:16,282 -  Testing time:12.719 seconds
+2024-03-28 15:19:16,283 -  avg_test_acc: {'uniform': 0.6881999969482422, 'validclass': 0.6881999969482422, 'labeldist': 0.6881999969482422}
+2024-03-28 15:19:16,283 -  pfl_avg_test_acc: {'uniform': 0.4862500011920929, 'validclass': 0.5860204368829727, 'labeldist': 0.8377195715904235}
+2024-03-28 15:19:16,288 - Round:142 - Active clients:[25 61 42 33 81 68  6  7 54 94]:
+2024-03-28 15:19:21,407 -  Training time:5.115 seconds
+2024-03-28 15:19:34,160 -  Testing time:12.741 seconds
+2024-03-28 15:19:34,160 -  avg_test_acc: {'uniform': 0.6499000191688538, 'validclass': 0.6499000191688538, 'labeldist': 0.6499000191688538}
+2024-03-28 15:19:34,160 -  pfl_avg_test_acc: {'uniform': 0.43743000030517576, 'validclass': 0.6236352860927582, 'labeldist': 0.8424443900585175}
+2024-03-28 15:19:34,160 - Round:143 - Active clients:[48  9 67 99 79  5 66 46 42 65]:
+2024-03-28 15:19:40,765 -  Training time:6.601 seconds
+2024-03-28 15:19:53,680 -  Testing time:12.902 seconds
+2024-03-28 15:19:53,680 -  avg_test_acc: {'uniform': 0.6513000130653381, 'validclass': 0.6513000130653381, 'labeldist': 0.6513000726699829}
+2024-03-28 15:19:53,681 -  pfl_avg_test_acc: {'uniform': 0.4239900052547455, 'validclass': 0.6788733243942261, 'labeldist': 0.849216741323471}
+2024-03-28 15:19:53,681 - Round:144 - Active clients:[79 90 28 32 18 35 17 59 99 64]:
+2024-03-28 15:19:59,865 -  Training time:6.180 seconds
+2024-03-28 15:20:12,540 -  Testing time:12.663 seconds
+2024-03-28 15:20:12,540 -  avg_test_acc: {'uniform': 0.65829998254776, 'validclass': 0.65829998254776, 'labeldist': 0.65829998254776}
+2024-03-28 15:20:12,540 -  pfl_avg_test_acc: {'uniform': 0.47446000576019287, 'validclass': 0.6144180953502655, 'labeldist': 0.8369068086147309}
+2024-03-28 15:20:12,541 - Round:145 - Active clients:[39 24 70 43 88 74 45 54 63  0]:
+2024-03-28 15:20:18,497 -  Training time:5.954 seconds
+2024-03-28 15:20:31,447 -  Testing time:12.938 seconds
+2024-03-28 15:20:31,447 -  avg_test_acc: {'uniform': 0.679099977016449, 'validclass': 0.679099977016449, 'labeldist': 0.6791000366210938}
+2024-03-28 15:20:31,447 -  pfl_avg_test_acc: {'uniform': 0.41829000115394593, 'validclass': 0.6182019472122192, 'labeldist': 0.8325886964797974}
+2024-03-28 15:20:31,447 - Round:146 - Active clients:[91 54 23 10 89 34 68 83 84 67]:
+2024-03-28 15:20:37,327 -  Training time:5.876 seconds
+2024-03-28 15:20:49,969 -  Testing time:12.631 seconds
+2024-03-28 15:20:49,969 -  avg_test_acc: {'uniform': 0.6747000217437744, 'validclass': 0.6747000217437744, 'labeldist': 0.6747000813484192}
+2024-03-28 15:20:49,969 -  pfl_avg_test_acc: {'uniform': 0.4375400051474571, 'validclass': 0.6562835812568665, 'labeldist': 0.8285418152809143}
+2024-03-28 15:20:49,969 - Round:147 - Active clients:[ 9 28 51 49 13  6 26 61 15 37]:
+2024-03-28 15:20:54,915 -  Training time:4.943 seconds
+2024-03-28 15:21:07,603 -  Testing time:12.677 seconds
+2024-03-28 15:21:07,604 -  avg_test_acc: {'uniform': 0.6665999889373779, 'validclass': 0.6665999889373779, 'labeldist': 0.6665999889373779}
+2024-03-28 15:21:07,604 -  pfl_avg_test_acc: {'uniform': 0.4943199992179871, 'validclass': 0.5855235755443573, 'labeldist': 0.7981947541236878}
+2024-03-28 15:21:07,604 - Round:148 - Active clients:[77 90 30 39 54 62 59 37 76 10]:
+2024-03-28 15:21:13,914 -  Training time:6.308 seconds
+2024-03-28 15:21:26,484 -  Testing time:12.560 seconds
+2024-03-28 15:21:26,485 -  avg_test_acc: {'uniform': 0.6327000260353088, 'validclass': 0.6327000260353088, 'labeldist': 0.6327000260353088}
+2024-03-28 15:21:26,485 -  pfl_avg_test_acc: {'uniform': 0.44018999934196473, 'validclass': 0.614819324016571, 'labeldist': 0.8443933486938476}
+2024-03-28 15:21:26,485 - Round:149 - Active clients:[50 72 62 53 76 94 25 13 42 51]:
+2024-03-28 15:21:31,963 -  Training time:5.476 seconds
+2024-03-28 15:21:44,781 -  Testing time:12.799 seconds
+2024-03-28 15:21:44,781 -  avg_test_acc: {'uniform': 0.6690999865531921, 'validclass': 0.6690999865531921, 'labeldist': 0.6690999865531921}
+2024-03-28 15:21:44,781 -  pfl_avg_test_acc: {'uniform': 0.4690999984741211, 'validclass': 0.6305417418479919, 'labeldist': 0.8262876033782959}
+2024-03-28 15:21:44,781 - Round:150 - Active clients:[85 57 52 32 35 20 39 72  8 89]:
+2024-03-28 15:21:51,896 -  Training time:7.113 seconds
+2024-03-28 15:22:04,653 -  Testing time:12.744 seconds
+2024-03-28 15:22:04,653 -  avg_test_acc: {'uniform': 0.6503999829292297, 'validclass': 0.6503999829292297, 'labeldist': 0.6503999829292297}
+2024-03-28 15:22:04,653 -  pfl_avg_test_acc: {'uniform': 0.49104000329971315, 'validclass': 0.6267549216747283, 'labeldist': 0.8400667011737823}
+2024-03-28 15:22:04,654 - Round:151 - Active clients:[18 12 88 60 84 40 53 15 49  1]:
+2024-03-28 15:22:10,602 -  Training time:5.945 seconds
+2024-03-28 15:22:23,282 -  Testing time:12.668 seconds
+2024-03-28 15:22:23,282 -  avg_test_acc: {'uniform': 0.6754000186920166, 'validclass': 0.6754000186920166, 'labeldist': 0.6754000186920166}
+2024-03-28 15:22:23,283 -  pfl_avg_test_acc: {'uniform': 0.48504999876022337, 'validclass': 0.6371263146400452, 'labeldist': 0.8150427997112274}
+2024-03-28 15:22:23,283 - Round:152 - Active clients:[61 37 89 76 10 46 84 32 75 38]:
+2024-03-28 15:22:28,784 -  Training time:5.499 seconds
+2024-03-28 15:22:41,529 -  Testing time:12.735 seconds
+2024-03-28 15:22:41,530 -  avg_test_acc: {'uniform': 0.6765999794006348, 'validclass': 0.6765999794006348, 'labeldist': 0.6765999794006348}
+2024-03-28 15:22:41,530 -  pfl_avg_test_acc: {'uniform': 0.47045000195503234, 'validclass': 0.6052595347166061, 'labeldist': 0.8237715184688568}
+2024-03-28 15:22:41,530 - Round:153 - Active clients:[32 27 80 15 25 13 91 83 51 56]:
+2024-03-28 15:22:47,363 -  Training time:5.830 seconds
+2024-03-28 15:23:00,001 -  Testing time:12.628 seconds
+2024-03-28 15:23:00,002 -  avg_test_acc: {'uniform': 0.541700005531311, 'validclass': 0.541700005531311, 'labeldist': 0.5416999459266663}
+2024-03-28 15:23:00,002 -  pfl_avg_test_acc: {'uniform': 0.4343300014734268, 'validclass': 0.6753958344459534, 'labeldist': 0.8451699614524841}
+2024-03-28 15:23:00,002 - Round:154 - Active clients:[93 62 98 13  5 77  2 65 96 53]:
+2024-03-28 15:23:06,038 -  Training time:6.032 seconds
+2024-03-28 15:23:18,695 -  Testing time:12.648 seconds
+2024-03-28 15:23:18,695 -  avg_test_acc: {'uniform': 0.6563000082969666, 'validclass': 0.6563000082969666, 'labeldist': 0.6563000679016113}
+2024-03-28 15:23:18,695 -  pfl_avg_test_acc: {'uniform': 0.4850699961185455, 'validclass': 0.61996408700943, 'labeldist': 0.8301756262779236}
+2024-03-28 15:23:18,695 - Round:155 - Active clients:[78 45 76 63 38 30  1 20 80 13]:
+2024-03-28 15:23:25,808 -  Training time:7.110 seconds
+2024-03-28 15:23:38,514 -  Testing time:12.694 seconds
+2024-03-28 15:23:38,514 -  avg_test_acc: {'uniform': 0.6309000253677368, 'validclass': 0.6309000253677368, 'labeldist': 0.6309000253677368}
+2024-03-28 15:23:38,514 -  pfl_avg_test_acc: {'uniform': 0.4251899987459183, 'validclass': 0.6393051505088806, 'labeldist': 0.872698187828064}
+2024-03-28 15:23:38,514 - Round:156 - Active clients:[ 0 79 98 90 80 50 82 29 93 68]:
+2024-03-28 15:23:44,204 -  Training time:5.687 seconds
+2024-03-28 15:23:56,908 -  Testing time:12.689 seconds
+2024-03-28 15:23:56,908 -  avg_test_acc: {'uniform': 0.692300021648407, 'validclass': 0.692300021648407, 'labeldist': 0.6922999620437622}
+2024-03-28 15:23:56,908 -  pfl_avg_test_acc: {'uniform': 0.43797999918460845, 'validclass': 0.6166291654109954, 'labeldist': 0.8510220050811768}
+2024-03-28 15:23:56,913 - Round:157 - Active clients:[93 73 99 29 37 92 90 12  7 96]:
+2024-03-28 15:24:02,232 -  Training time:5.317 seconds
+2024-03-28 15:24:14,985 -  Testing time:12.741 seconds
+2024-03-28 15:24:14,985 -  avg_test_acc: {'uniform': 0.6880000233650208, 'validclass': 0.6880000233650208, 'labeldist': 0.687999963760376}
+2024-03-28 15:24:14,986 -  pfl_avg_test_acc: {'uniform': 0.5073300004005432, 'validclass': 0.6250784873962403, 'labeldist': 0.8239892005920411}
+2024-03-28 15:24:14,986 - Round:158 - Active clients:[27 15 55 77 19  0 75 87 65 57]:
+2024-03-28 15:24:20,611 -  Training time:5.623 seconds
+2024-03-28 15:24:33,378 -  Testing time:12.755 seconds
+2024-03-28 15:24:33,378 -  avg_test_acc: {'uniform': 0.6829000115394592, 'validclass': 0.6829000115394592, 'labeldist': 0.6828999519348145}
+2024-03-28 15:24:33,378 -  pfl_avg_test_acc: {'uniform': 0.5036799967288971, 'validclass': 0.5972570985555649, 'labeldist': 0.8303582191467285}
+2024-03-28 15:24:33,379 - Round:159 - Active clients:[50 75 45 33 21  8 52 62 82 59]:
+2024-03-28 15:24:38,452 -  Training time:5.070 seconds
+2024-03-28 15:24:51,277 -  Testing time:12.808 seconds
+2024-03-28 15:24:51,278 -  avg_test_acc: {'uniform': 0.671999990940094, 'validclass': 0.671999990940094, 'labeldist': 0.6720000505447388}
+2024-03-28 15:24:51,278 -  pfl_avg_test_acc: {'uniform': 0.5072300016880036, 'validclass': 0.5692370176315308, 'labeldist': 0.8295397400856018}
+2024-03-28 15:24:51,278 - Round:160 - Active clients:[ 9 57 22 41 28 46 83 73 85 71]:
+2024-03-28 15:24:56,598 -  Training time:5.316 seconds
+2024-03-28 15:25:09,266 -  Testing time:12.652 seconds
+2024-03-28 15:25:09,266 -  avg_test_acc: {'uniform': 0.7001000046730042, 'validclass': 0.7001000046730042, 'labeldist': 0.7001000642776489}
+2024-03-28 15:25:09,266 -  pfl_avg_test_acc: {'uniform': 0.4923200011253357, 'validclass': 0.5945092529058457, 'labeldist': 0.8404612898826599}
+2024-03-28 15:25:09,271 - Round:161 - Active clients:[91  7 93 55 62  9 25 20 98 30]:
+2024-03-28 15:25:15,632 -  Training time:6.357 seconds
+2024-03-28 15:25:28,250 -  Testing time:12.607 seconds
+2024-03-28 15:25:28,250 -  avg_test_acc: {'uniform': 0.6736000180244446, 'validclass': 0.6736000180244446, 'labeldist': 0.6735999584197998}
+2024-03-28 15:25:28,250 -  pfl_avg_test_acc: {'uniform': 0.47808000147342683, 'validclass': 0.6399629414081573, 'labeldist': 0.8314365565776825}
+2024-03-28 15:25:28,251 - Round:162 - Active clients:[31 40 67 21  0 88 90 93 41 20]:
+2024-03-28 15:25:36,293 -  Training time:8.040 seconds
+2024-03-28 15:25:49,197 -  Testing time:12.889 seconds
+2024-03-28 15:25:49,197 -  avg_test_acc: {'uniform': 0.666100025177002, 'validclass': 0.666100025177002, 'labeldist': 0.6660999655723572}
+2024-03-28 15:25:49,197 -  pfl_avg_test_acc: {'uniform': 0.46283999979496004, 'validclass': 0.6416570663452148, 'labeldist': 0.8388431429862976}
+2024-03-28 15:25:49,198 - Round:163 - Active clients:[54 92 21 58 49 95 24 61 52  4]:
+2024-03-28 15:25:54,722 -  Training time:5.521 seconds
+2024-03-28 15:26:07,515 -  Testing time:12.782 seconds
+2024-03-28 15:26:07,515 -  avg_test_acc: {'uniform': 0.6891999840736389, 'validclass': 0.6891999840736389, 'labeldist': 0.6891999840736389}
+2024-03-28 15:26:07,515 -  pfl_avg_test_acc: {'uniform': 0.5095300018787384, 'validclass': 0.6153528571128846, 'labeldist': 0.8065447509288788}
+2024-03-28 15:26:07,515 - Round:164 - Active clients:[32 92 71  3 65 60 25 30 39 19]:
+2024-03-28 15:26:14,365 -  Training time:6.847 seconds
+2024-03-28 15:26:26,934 -  Testing time:12.558 seconds
+2024-03-28 15:26:26,934 -  avg_test_acc: {'uniform': 0.6873999834060669, 'validclass': 0.6873999834060669, 'labeldist': 0.6874000430107117}
+2024-03-28 15:26:26,935 -  pfl_avg_test_acc: {'uniform': 0.4661599934101105, 'validclass': 0.6592710733413696, 'labeldist': 0.8412528336048126}
+2024-03-28 15:26:26,935 - Round:165 - Active clients:[62 14 59 39 40 26 54 82  6 95]:
+2024-03-28 15:26:32,524 -  Training time:5.586 seconds
+2024-03-28 15:26:45,251 -  Testing time:12.717 seconds
+2024-03-28 15:26:45,251 -  avg_test_acc: {'uniform': 0.6962000131607056, 'validclass': 0.6962000131607056, 'labeldist': 0.6962000131607056}
+2024-03-28 15:26:45,251 -  pfl_avg_test_acc: {'uniform': 0.4963699996471405, 'validclass': 0.6125756025314331, 'labeldist': 0.8192819595336914}
+2024-03-28 15:26:45,252 - Round:166 - Active clients:[53 75 92 67 43  7 46 98 77 64]:
+2024-03-28 15:26:51,187 -  Training time:5.933 seconds
+2024-03-28 15:27:04,123 -  Testing time:12.924 seconds
+2024-03-28 15:27:04,123 -  avg_test_acc: {'uniform': 0.6998000144958496, 'validclass': 0.6998000144958496, 'labeldist': 0.6997999548912048}
+2024-03-28 15:27:04,123 -  pfl_avg_test_acc: {'uniform': 0.4706800043582916, 'validclass': 0.6186507493257523, 'labeldist': 0.8426197946071625}
+2024-03-28 15:27:04,124 - Round:167 - Active clients:[61 35 96 93  2 95 40  5 26 11]:
+2024-03-28 15:27:10,491 -  Training time:6.364 seconds
+2024-03-28 15:27:23,191 -  Testing time:12.690 seconds
+2024-03-28 15:27:23,191 -  avg_test_acc: {'uniform': 0.6309999823570251, 'validclass': 0.6309999823570251, 'labeldist': 0.6310000419616699}
+2024-03-28 15:27:23,191 -  pfl_avg_test_acc: {'uniform': 0.4779100030660629, 'validclass': 0.6292153596878052, 'labeldist': 0.8130653619766235}
+2024-03-28 15:27:23,191 - Round:168 - Active clients:[33 60 31 76 79 86 16 19 47 68]:
+2024-03-28 15:27:29,896 -  Training time:6.702 seconds
+2024-03-28 15:27:42,802 -  Testing time:12.897 seconds
+2024-03-28 15:27:42,802 -  avg_test_acc: {'uniform': 0.6898999810218811, 'validclass': 0.6898999810218811, 'labeldist': 0.6899000406265259}
+2024-03-28 15:27:42,803 -  pfl_avg_test_acc: {'uniform': 0.4760800004005432, 'validclass': 0.6147752821445465, 'labeldist': 0.8525936126708984}
+2024-03-28 15:27:42,803 - Round:169 - Active clients:[13 31 85 69 87 59  2 46 67 40]:
+2024-03-28 15:27:48,225 -  Training time:5.419 seconds
+2024-03-28 15:28:01,016 -  Testing time:12.780 seconds
+2024-03-28 15:28:01,017 -  avg_test_acc: {'uniform': 0.6933000087738037, 'validclass': 0.6933000087738037, 'labeldist': 0.6933000683784485}
+2024-03-28 15:28:01,017 -  pfl_avg_test_acc: {'uniform': 0.4969900012016296, 'validclass': 0.6464036166667938, 'labeldist': 0.8439487218856812}
+2024-03-28 15:28:01,017 - Round:170 - Active clients:[83 75 84 21  0 68 30 91 96 56]:
+2024-03-28 15:28:05,965 -  Training time:4.947 seconds
+2024-03-28 15:28:19,092 -  Testing time:13.114 seconds
+2024-03-28 15:28:19,092 -  avg_test_acc: {'uniform': 0.6712999939918518, 'validclass': 0.6712999939918518, 'labeldist': 0.6713000535964966}
+2024-03-28 15:28:19,092 -  pfl_avg_test_acc: {'uniform': 0.45632000267505646, 'validclass': 0.614339217543602, 'labeldist': 0.8392855107784272}
+2024-03-28 15:28:19,093 - Round:171 - Active clients:[72 76 52 63  4 33 59 47  2 49]:
+2024-03-28 15:28:25,006 -  Training time:5.911 seconds
+2024-03-28 15:28:38,089 -  Testing time:13.071 seconds
+2024-03-28 15:28:38,090 -  avg_test_acc: {'uniform': 0.6726999878883362, 'validclass': 0.6726999878883362, 'labeldist': 0.6726999878883362}
+2024-03-28 15:28:38,090 -  pfl_avg_test_acc: {'uniform': 0.4727699995040894, 'validclass': 0.6119871497154236, 'labeldist': 0.847846382856369}
+2024-03-28 15:28:38,091 - Round:172 - Active clients:[17 56 35 15 96 30 24 75 39  0]:
+2024-03-28 15:28:43,183 -  Training time:5.090 seconds
+2024-03-28 15:28:56,356 -  Testing time:13.162 seconds
+2024-03-28 15:28:56,356 -  avg_test_acc: {'uniform': 0.6456000208854675, 'validclass': 0.6456000208854675, 'labeldist': 0.6455999612808228}
+2024-03-28 15:28:56,356 -  pfl_avg_test_acc: {'uniform': 0.47897000014781954, 'validclass': 0.6202871441841126, 'labeldist': 0.8425838470458984}
+2024-03-28 15:28:56,356 - Round:173 - Active clients:[70  1 20 90 94 82 80 73 27  8]:
+2024-03-28 15:29:03,299 -  Training time:6.940 seconds
+2024-03-28 15:29:16,384 -  Testing time:13.075 seconds
+2024-03-28 15:29:16,384 -  avg_test_acc: {'uniform': 0.6830000281333923, 'validclass': 0.6830000281333923, 'labeldist': 0.6830000281333923}
+2024-03-28 15:29:16,384 -  pfl_avg_test_acc: {'uniform': 0.5021399945020676, 'validclass': 0.6104836583137512, 'labeldist': 0.8434531211853027}
+2024-03-28 15:29:16,384 - Round:174 - Active clients:[13 96 94 55  6 21 51 10 34 50]:
+2024-03-28 15:29:21,865 -  Training time:5.478 seconds
+2024-03-28 15:29:35,007 -  Testing time:13.130 seconds
+2024-03-28 15:29:35,007 -  avg_test_acc: {'uniform': 0.6912999749183655, 'validclass': 0.6912999749183655, 'labeldist': 0.6913000345230103}
+2024-03-28 15:29:35,007 -  pfl_avg_test_acc: {'uniform': 0.5249799996614456, 'validclass': 0.6266802310943603, 'labeldist': 0.8294069826602936}
+2024-03-28 15:29:35,008 - Round:175 - Active clients:[17 80 47 42 99 76 48 94 25 24]:
+2024-03-28 15:29:41,250 -  Training time:6.239 seconds
+2024-03-28 15:29:54,354 -  Testing time:13.092 seconds
+2024-03-28 15:29:54,355 -  avg_test_acc: {'uniform': 0.6327999830245972, 'validclass': 0.6327999830245972, 'labeldist': 0.6327999830245972}
+2024-03-28 15:29:54,355 -  pfl_avg_test_acc: {'uniform': 0.432710000872612, 'validclass': 0.7015435338020325, 'labeldist': 0.8501518905162812}
+2024-03-28 15:29:54,355 - Round:176 - Active clients:[ 7 49 74 23 33 39 28 35  2 93]:
+2024-03-28 15:29:59,838 -  Training time:5.480 seconds
+2024-03-28 15:30:12,821 -  Testing time:12.971 seconds
+2024-03-28 15:30:12,821 -  avg_test_acc: {'uniform': 0.6909000277519226, 'validclass': 0.6909000277519226, 'labeldist': 0.6909000277519226}
+2024-03-28 15:30:12,821 -  pfl_avg_test_acc: {'uniform': 0.49506000280380247, 'validclass': 0.6007271885871888, 'labeldist': 0.8473600387573242}
+2024-03-28 15:30:12,821 - Round:177 - Active clients:[89 97 65  1 80 27 25 93 37 54]:
+2024-03-28 15:30:20,280 -  Training time:7.456 seconds
+2024-03-28 15:30:33,342 -  Testing time:13.049 seconds
+2024-03-28 15:30:33,342 -  avg_test_acc: {'uniform': 0.616100013256073, 'validclass': 0.616100013256073, 'labeldist': 0.6160999536514282}
+2024-03-28 15:30:33,342 -  pfl_avg_test_acc: {'uniform': 0.4597999930381775, 'validclass': 0.7067509114742279, 'labeldist': 0.8605216681957245}
+2024-03-28 15:30:33,343 - Round:178 - Active clients:[ 1 32 94 87 33 50 91 52 77 59]:
+2024-03-28 15:30:38,604 -  Training time:5.259 seconds
+2024-03-28 15:30:51,681 -  Testing time:13.058 seconds
+2024-03-28 15:30:51,681 -  avg_test_acc: {'uniform': 0.707099974155426, 'validclass': 0.707099974155426, 'labeldist': 0.707099974155426}
+2024-03-28 15:30:51,681 -  pfl_avg_test_acc: {'uniform': 0.547380006313324, 'validclass': 0.6106103599071503, 'labeldist': 0.8283683001995087}
+2024-03-28 15:30:51,687 - Round:179 - Active clients:[93 94 18 27 50 29 80 40 20 56]:
+2024-03-28 15:30:57,872 -  Training time:6.183 seconds
+2024-03-28 15:31:10,544 -  Testing time:12.659 seconds
+2024-03-28 15:31:10,544 -  avg_test_acc: {'uniform': 0.6510000228881836, 'validclass': 0.6510000228881836, 'labeldist': 0.6510000228881836}
+2024-03-28 15:31:10,544 -  pfl_avg_test_acc: {'uniform': 0.46269999742507933, 'validclass': 0.7048921048641205, 'labeldist': 0.8517468690872192}
+2024-03-28 15:31:10,544 - Round:180 - Active clients:[67 71 64 63 96 16 30  6  9 61]:
+2024-03-28 15:31:15,691 -  Training time:5.144 seconds
+2024-03-28 15:31:28,391 -  Testing time:12.689 seconds
+2024-03-28 15:31:28,391 -  avg_test_acc: {'uniform': 0.6923999786376953, 'validclass': 0.6923999786376953, 'labeldist': 0.6923999786376953}
+2024-03-28 15:31:28,391 -  pfl_avg_test_acc: {'uniform': 0.4939699977636337, 'validclass': 0.6732397556304932, 'labeldist': 0.8400664448738098}
+2024-03-28 15:31:28,391 - Round:181 - Active clients:[67 37 22 13 40 45 60 15 29 59]:
+2024-03-28 15:31:34,048 -  Training time:5.654 seconds
+2024-03-28 15:31:46,985 -  Testing time:12.926 seconds
+2024-03-28 15:31:46,985 -  avg_test_acc: {'uniform': 0.6895999908447266, 'validclass': 0.6895999908447266, 'labeldist': 0.6896000504493713}
+2024-03-28 15:31:46,985 -  pfl_avg_test_acc: {'uniform': 0.49183000028133395, 'validclass': 0.6524718225002288, 'labeldist': 0.8387806713581085}
+2024-03-28 15:31:46,986 - Round:182 - Active clients:[76 81 58 20 97 47 59 40 93 56]:
+2024-03-28 15:31:53,574 -  Training time:6.584 seconds
+2024-03-28 15:32:06,532 -  Testing time:12.948 seconds
+2024-03-28 15:32:06,532 -  avg_test_acc: {'uniform': 0.6626999974250793, 'validclass': 0.6626999974250793, 'labeldist': 0.6626999378204346}
+2024-03-28 15:32:06,532 -  pfl_avg_test_acc: {'uniform': 0.4603100061416626, 'validclass': 0.6326877415180207, 'labeldist': 0.8646286189556122}
+2024-03-28 15:32:06,533 - Round:183 - Active clients:[58 34 18 69 26 86 72 45 29  9]:
+2024-03-28 15:32:11,773 -  Training time:5.237 seconds
+2024-03-28 15:32:24,323 -  Testing time:12.539 seconds
+2024-03-28 15:32:24,324 -  avg_test_acc: {'uniform': 0.7074000239372253, 'validclass': 0.7074000239372253, 'labeldist': 0.7074000239372253}
+2024-03-28 15:32:24,324 -  pfl_avg_test_acc: {'uniform': 0.48053000271320345, 'validclass': 0.6429097175598144, 'labeldist': 0.8446569800376892}
+2024-03-28 15:32:24,328 - Round:184 - Active clients:[87 50 18 81 51 70 34 42 15 77]:
+2024-03-28 15:32:29,405 -  Training time:5.075 seconds
+2024-03-28 15:32:41,694 -  Testing time:12.278 seconds
+2024-03-28 15:32:41,694 -  avg_test_acc: {'uniform': 0.7131999731063843, 'validclass': 0.7131999731063843, 'labeldist': 0.7131999731063843}
+2024-03-28 15:32:41,695 -  pfl_avg_test_acc: {'uniform': 0.49330000281333924, 'validclass': 0.6418215036392212, 'labeldist': 0.8528111517429352}
+2024-03-28 15:32:41,699 - Round:185 - Active clients:[ 6  9 42 60 43 50 12 26 61 77]:
+2024-03-28 15:32:45,750 -  Training time:4.048 seconds
+2024-03-28 15:32:58,403 -  Testing time:12.642 seconds
+2024-03-28 15:32:58,403 -  avg_test_acc: {'uniform': 0.704800009727478, 'validclass': 0.704800009727478, 'labeldist': 0.7047999501228333}
+2024-03-28 15:32:58,403 -  pfl_avg_test_acc: {'uniform': 0.5324700057506562, 'validclass': 0.6537366688251496, 'labeldist': 0.8215072214603424}
+2024-03-28 15:32:58,405 - Round:186 - Active clients:[42 79 89 72 49  6 16 64 96 87]:
+2024-03-28 15:33:03,284 -  Training time:4.877 seconds
+2024-03-28 15:33:15,120 -  Testing time:11.825 seconds
+2024-03-28 15:33:15,120 -  avg_test_acc: {'uniform': 0.7117000222206116, 'validclass': 0.7117000222206116, 'labeldist': 0.7117000222206116}
+2024-03-28 15:33:15,121 -  pfl_avg_test_acc: {'uniform': 0.5561900049448013, 'validclass': 0.6313425302505493, 'labeldist': 0.8268167972564697}
+2024-03-28 15:33:15,121 - Round:187 - Active clients:[92 29 94 81 27  4 65 32 41 12]:
+2024-03-28 15:33:21,122 -  Training time:5.998 seconds
+2024-03-28 15:33:33,822 -  Testing time:12.689 seconds
+2024-03-28 15:33:33,822 -  avg_test_acc: {'uniform': 0.7200000286102295, 'validclass': 0.7200000286102295, 'labeldist': 0.7200000286102295}
+2024-03-28 15:33:33,822 -  pfl_avg_test_acc: {'uniform': 0.5400700002908707, 'validclass': 0.6123757541179657, 'labeldist': 0.8525412261486054}
+2024-03-28 15:33:33,827 - Round:188 - Active clients:[96 12 73 81  4 66 87 79 32 93]:
+2024-03-28 15:33:37,863 -  Training time:4.033 seconds
+2024-03-28 15:33:50,811 -  Testing time:12.935 seconds
+2024-03-28 15:33:50,811 -  avg_test_acc: {'uniform': 0.7177000045776367, 'validclass': 0.7177000045776367, 'labeldist': 0.7177000641822815}
+2024-03-28 15:33:50,811 -  pfl_avg_test_acc: {'uniform': 0.5499000132083893, 'validclass': 0.6515541672706604, 'labeldist': 0.8513144731521607}
+2024-03-28 15:33:50,812 - Round:189 - Active clients:[27 49 43  4 14 89 52 98 41 22]:
+2024-03-28 15:33:57,030 -  Training time:6.215 seconds
+2024-03-28 15:34:09,884 -  Testing time:12.840 seconds
+2024-03-28 15:34:09,884 -  avg_test_acc: {'uniform': 0.7150999903678894, 'validclass': 0.7150999903678894, 'labeldist': 0.7151000499725342}
+2024-03-28 15:34:09,884 -  pfl_avg_test_acc: {'uniform': 0.5835900068283081, 'validclass': 0.6278829455375672, 'labeldist': 0.8249886751174926}
+2024-03-28 15:34:09,885 - Round:190 - Active clients:[62 72 26 47 41 60 28 45 91 79]:
+2024-03-28 15:34:15,548 -  Training time:5.655 seconds
+2024-03-28 15:34:28,548 -  Testing time:12.989 seconds
+2024-03-28 15:34:28,548 -  avg_test_acc: {'uniform': 0.7128999829292297, 'validclass': 0.7128999829292297, 'labeldist': 0.7128999829292297}
+2024-03-28 15:34:28,548 -  pfl_avg_test_acc: {'uniform': 0.5108399957418441, 'validclass': 0.6340851664543152, 'labeldist': 0.8269661903381348}
+2024-03-28 15:34:28,548 - Round:191 - Active clients:[46 33  7 54 12 87 67 25  4 73]:
+2024-03-28 15:34:33,469 -  Training time:4.919 seconds
+2024-03-28 15:34:46,400 -  Testing time:12.915 seconds
+2024-03-28 15:34:46,401 -  avg_test_acc: {'uniform': 0.7057999968528748, 'validclass': 0.7057999968528748, 'labeldist': 0.7057999968528748}
+2024-03-28 15:34:46,401 -  pfl_avg_test_acc: {'uniform': 0.48248000144958497, 'validclass': 0.6821499943733216, 'labeldist': 0.8664823949337006}
+2024-03-28 15:34:46,402 - Round:192 - Active clients:[70 11 84 47 76 15  5  4  6 65]:
+2024-03-28 15:34:52,849 -  Training time:6.443 seconds
+2024-03-28 15:35:05,581 -  Testing time:12.722 seconds
+2024-03-28 15:35:05,582 -  avg_test_acc: {'uniform': 0.6815000176429749, 'validclass': 0.6815000176429749, 'labeldist': 0.6815000772476196}
+2024-03-28 15:35:05,582 -  pfl_avg_test_acc: {'uniform': 0.5034800052642823, 'validclass': 0.6337255656719207, 'labeldist': 0.8246985971927643}
+2024-03-28 15:35:05,582 - Round:193 - Active clients:[45 79 29 86 90 85  4 51 33 80]:
+2024-03-28 15:35:11,503 -  Training time:5.919 seconds
+2024-03-28 15:35:24,229 -  Testing time:12.715 seconds
+2024-03-28 15:35:24,230 -  avg_test_acc: {'uniform': 0.6439999938011169, 'validclass': 0.6439999938011169, 'labeldist': 0.6439999938011169}
+2024-03-28 15:35:24,230 -  pfl_avg_test_acc: {'uniform': 0.4794000029563904, 'validclass': 0.6453351199626922, 'labeldist': 0.8765432238578796}
+2024-03-28 15:35:24,231 - Round:194 - Active clients:[10 62 25 13 35 90 83  6 46 75]:
+2024-03-28 15:35:30,208 -  Training time:5.976 seconds
+2024-03-28 15:35:43,086 -  Testing time:12.863 seconds
+2024-03-28 15:35:43,086 -  avg_test_acc: {'uniform': 0.703000009059906, 'validclass': 0.703000009059906, 'labeldist': 0.703000009059906}
+2024-03-28 15:35:43,086 -  pfl_avg_test_acc: {'uniform': 0.4974699944257736, 'validclass': 0.6195886015892029, 'labeldist': 0.8466017425060273}
+2024-03-28 15:35:43,087 - Round:195 - Active clients:[50 90 24 77 39 32 76 60  2 51]:
+2024-03-28 15:35:49,010 -  Training time:5.920 seconds
+2024-03-28 15:36:01,956 -  Testing time:12.934 seconds
+2024-03-28 15:36:01,956 -  avg_test_acc: {'uniform': 0.6894999742507935, 'validclass': 0.6894999742507935, 'labeldist': 0.689500093460083}
+2024-03-28 15:36:01,956 -  pfl_avg_test_acc: {'uniform': 0.495729997754097, 'validclass': 0.6363174557685852, 'labeldist': 0.8543561577796936}
+2024-03-28 15:36:01,956 - Round:196 - Active clients:[80 87 37 77  4 97 82 73 61 29]:
+2024-03-28 15:36:06,461 -  Training time:4.501 seconds
+2024-03-28 15:36:19,545 -  Testing time:13.070 seconds
+2024-03-28 15:36:19,545 -  avg_test_acc: {'uniform': 0.6998999714851379, 'validclass': 0.6998999714851379, 'labeldist': 0.6998999714851379}
+2024-03-28 15:36:19,545 -  pfl_avg_test_acc: {'uniform': 0.5295099973678589, 'validclass': 0.6392702341079712, 'labeldist': 0.8459011733531951}
+2024-03-28 15:36:19,545 - Round:197 - Active clients:[82 16 28  0  8 70  4 13 32 11]:
+2024-03-28 15:36:25,010 -  Training time:5.459 seconds
+2024-03-28 15:36:37,880 -  Testing time:12.860 seconds
+2024-03-28 15:36:37,881 -  avg_test_acc: {'uniform': 0.7203999757766724, 'validclass': 0.7203999757766724, 'labeldist': 0.7204000353813171}
+2024-03-28 15:36:37,881 -  pfl_avg_test_acc: {'uniform': 0.5097800016403198, 'validclass': 0.5955144882202148, 'labeldist': 0.8325599431991577}
+2024-03-28 15:36:37,885 - Round:198 - Active clients:[11 38 53 19 87 42 40 78 60 35]:
+2024-03-28 15:36:43,889 -  Training time:6.001 seconds
+2024-03-28 15:36:56,917 -  Testing time:13.016 seconds
+2024-03-28 15:36:56,918 -  avg_test_acc: {'uniform': 0.7113000154495239, 'validclass': 0.7113000154495239, 'labeldist': 0.7113000154495239}
+2024-03-28 15:36:56,918 -  pfl_avg_test_acc: {'uniform': 0.533090004324913, 'validclass': 0.6395194411277771, 'labeldist': 0.8205144762992859}
+2024-03-28 15:36:56,918 - Round:199 - Active clients:[51 87 30 25 49 57 37 52 56 29]:
+2024-03-28 15:37:02,515 -  Training time:5.594 seconds
+2024-03-28 15:37:14,008 -  Testing time:11.481 seconds
+2024-03-28 15:37:14,009 -  avg_test_acc: {'uniform': 0.6550999879837036, 'validclass': 0.6550999879837036, 'labeldist': 0.6551000475883484}
+2024-03-28 15:37:14,009 -  pfl_avg_test_acc: {'uniform': 0.47657000422477724, 'validclass': 0.6737886846065522, 'labeldist': 0.8605529069900513}
+2024-03-28 15:37:14,009 - Round:200 - Active clients:[34  2 72 37 86 64 80 63  9 19]:
+2024-03-28 15:37:20,387 -  Training time:6.375 seconds
+2024-03-28 15:37:32,998 -  Testing time:12.601 seconds
+2024-03-28 15:37:32,998 -  avg_test_acc: {'uniform': 0.7050999999046326, 'validclass': 0.7050999999046326, 'labeldist': 0.7051000595092773}
+2024-03-28 15:37:32,999 -  pfl_avg_test_acc: {'uniform': 0.4749900072813034, 'validclass': 0.6600694417953491, 'labeldist': 0.8530089914798736}

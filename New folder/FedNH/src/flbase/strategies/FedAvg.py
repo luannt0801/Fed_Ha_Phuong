@@ -3,6 +3,7 @@ import numpy as np
 from tqdm import tqdm
 from copy import deepcopy
 import torch
+import logging
 try:
     import wandb
 except ModuleNotFoundError:
@@ -121,6 +122,7 @@ class FedAvgServer(Server):
                     self.exclude_layer_keys.add(key)
         if len(self.exclude_layer_keys) > 0:
             print(f"{self.server_config['strategy']}Server: the following keys will not be aggregated:\n ", self.exclude_layer_keys)
+            logging.info(f"{self.server_config['strategy']}Server: the following keys will not be aggregated:\n {self.exclude_layer_keys}")
         # freeze_layers = []
         # for param in self.server_side_client.model.named_parameters():
         #     if param[1].requires_grad == False:
@@ -167,7 +169,9 @@ class FedAvgServer(Server):
 
         # test the performance for global models
         self.server_side_client.testing(round, testloader=None)  # use global testdataset
+        # x_logg = torch.sum(self.server_side_client.test_acc_dict[round]['correct_per_class']).item()
         print(' server global model correct', torch.sum(self.server_side_client.test_acc_dict[round]['correct_per_class']).item())
+        # logging(f"server global model correct {x_logg}")
         # test the performance for local models (potentiallt only for active local clients)
         client_indices = self.clients_dict.keys()
         if active_only:
@@ -242,6 +246,7 @@ class FedAvgServer(Server):
                 self.active_clients_indicies = selected_indices
             # active clients download weights from the server
             tqdm.write(f"Round:{r} - Active clients:{self.active_clients_indicies}:")
+            logging.info(f"Round:{r} - Active clients:{self.active_clients_indicies}:")
             for cid in self.active_clients_indicies:
                 client = self.clients_dict[cid]
                 client.set_params(self.server_model_state_dict, self.exclude_layer_keys)
@@ -255,6 +260,7 @@ class FedAvgServer(Server):
                 client_uploads.append(client.upload())
             train_time = time.time() - train_start
             print(f" Training time:{train_time:.3f} seconds")
+            logging.info(f" Training time:{train_time:.3f} seconds")
             # collect training stats
             # average train loss and acc over active clients, where each client uses the latest local models
             self.collect_stats(stage="train", round=r, active_only=True)
@@ -270,9 +276,12 @@ class FedAvgServer(Server):
                 self.testing(round=r, active_only=True)
                 test_time = time.time() - test_start
                 print(f" Testing time:{test_time:.3f} seconds")
+                logging.info(f" Testing time:{test_time:.3f} seconds")
                 self.collect_stats(stage="test", round=r, active_only=True)
                 print(" avg_test_acc:", self.gfl_test_acc_dict[r]['acc_by_criteria'])
+                logging.info(f" avg_test_acc: {self.gfl_test_acc_dict[r]['acc_by_criteria']}")
                 print(" pfl_avg_test_acc:", self.average_pfl_test_acc_dict[r])
+                logging.info(f" pfl_avg_test_acc: {self.average_pfl_test_acc_dict[r]}")
                 if len(self.gfl_test_acc_dict) >= 2:
                     current_key = r
                     if self.gfl_test_acc_dict[current_key]['acc_by_criteria']['uniform'] > best_test_acc:

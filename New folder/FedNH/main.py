@@ -4,6 +4,8 @@ import torch.nn as nn
 import yaml
 import sys
 import argparse
+import logging
+import datetime
 from torch.utils.data import DataLoader
 sys.path.append("../")
 from src.flbase.utils import setup_clients, resume_training
@@ -27,7 +29,7 @@ except ModuleNotFoundError:
 
 
 def run(args):
-
+    logging.info(f"Cac tham so truyen vao:\n {args}")
     use_wandb = wandb_installed and args.use_wandb
     setup_seed(args.global_seed)
 
@@ -122,8 +124,10 @@ def run(args):
     path = directory + run_tag
     if os.path.exists(path + '_final_server_obj.pkl'):
         print(f"Task:{run_tag} is finished. Exiting...")
+        logging.info(f"Task:{run_tag} is finished. Exiting...")
         exit()
     print('results are saved in: ', path)
+    logging.info(f'results are saved in: {path}')
     # exit()
     if use_wandb:
         wandb.init(config=config, name=run_tag, project=args.purpose)
@@ -144,6 +148,7 @@ def run(args):
                                      )
     else:
         print('split test set!')
+        # logging.info('split test set!')
         clients_dict = setup_clients(ClientCstr, trainset, testset, criterion,
                                      client_config_lst, args.device,
                                      server_config=server_config,
@@ -159,13 +164,20 @@ def run(args):
                             client_cstr=ClientCstr, server_side_client_config=client_config, server_side_client_device=args.device)
         print('Strategy Related Hyper-parameters:')
         print(' server side')
+        # logging.info('Strategy Related Hyper-parameters:')
+        # logging.info(' server side')
         for k in server_config.keys():
             if args.strategy in k:
                 print(' ', k, "_", server_config[k])
+                string_1 = ' ', k, "_", server_config[k]
+                # logging.info(f'{string_1}')
         print(' client side')
+        # logging.info('client side')
         for k in client_config.keys():
             if args.strategy in k:
                 print(' ', k, "_", client_config[k])
+                string_2 = (' ', k, "_", client_config[k])
+                # logging.info(f"{string_2}")
         server.run(filename=path + '_best_global_model.pkl', use_wandb=use_wandb, global_seed=args.global_seed)
         server.save(filename=path + '_final_server_obj.pkl', keep_clients_model=args.keep_clients_model)
     else:
@@ -174,6 +186,7 @@ def run(args):
         global_testloader = DataLoader(testset, batch_size=128, shuffle=False)
         for cid in clients_dict.keys():
             print(f"Progress:{cid}/{len(clients_dict)}")
+            # logging.info(f"Progress:{cid}/{len(clients_dict)}")
             client = clients_dict[cid]
             client.set_params(init_weight, exclude_keys=set())
             for r in range(1, expected_num_rounds + 1):
@@ -181,6 +194,7 @@ def run(args):
                 client.training(r, client.client_config['num_epochs'])
                 client.testing(r, global_testloader)
                 print(f"Round: {r}/{expected_num_rounds}", client.test_acc_dict[r]['acc_by_criteria'])
+                logging.info(f"Round: {r}/{expected_num_rounds}", f"{client.test_acc_dict[r]['acc_by_criteria']}")
             client.model = None
             client.trainloader = None
             client.trainset = None
@@ -189,6 +203,30 @@ def run(args):
 
 
 if __name__ == "__main__":
+
+    # LOGGING_DIR = 'D:\\Phuong ham hamm\\Fed_Ha_Phuong\\New folder\\FedNH\\logs'
+    # LOGGING_FILE = f"logs/app-log-1st.log"
+
+    # # Create log directory if it doesn't exist
+    # os.makedirs(LOGGING_DIR, exist_ok=True)
+
+    # logging.basicConfig(filename=LOGGING_FILE, level=logging.INFO, format='%(asctime)s - %(message)s')
+
+    LOGGING_DIR = 'D:\\Phuong ham hamm\\Fed_Ha_Phuong\\New folder\\FedNH\\logs'
+    LOGGING_FILE = os.path.join(LOGGING_DIR, 'app-log-1st-KETQUA.log')
+
+    # Create log directory if it doesn't exist
+    os.makedirs(LOGGING_DIR, exist_ok=True)
+
+    # Configure logging
+    logging.basicConfig(filename=LOGGING_FILE, level=logging.INFO, format='%(asctime)s - %(message)s')
+
+    # Start logging
+    logging.info('#### START RUN ####')
+
+    # Continue with your program
+
+
     parser = argparse.ArgumentParser(description='Test Algorithms.')
     # general settings
     parser.add_argument('--purpose', default='experiments', type=str, help='purpose of this run')
@@ -236,4 +274,6 @@ if __name__ == "__main__":
     parser.add_argument('--CReFF_lr_feature', default=0.1, type=float, help='lr for feature')
 
     args = parser.parse_args()
+    logging.info('#### START RUN ####')
     run(args)
+    logging.shutdown()

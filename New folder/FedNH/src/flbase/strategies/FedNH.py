@@ -3,6 +3,8 @@ import numpy as np
 from tqdm import tqdm
 from copy import deepcopy
 import torch
+import logging
+import os
 try:
     import wandb
 except ModuleNotFoundError:
@@ -17,6 +19,7 @@ from .FedUH import FedUHClient, FedUHServer
 import math
 import time
 import torch.nn.functional as F
+
 
 
 class FedNHClient(FedUHClient):
@@ -58,6 +61,7 @@ class FedNHClient(FedUHClient):
         return to_share
 
     def _estimate_prototype_adv(self):
+        logging.info('Estimate Prototype Advacne: \n')
         self.model.eval()
         self.model.return_embedding = True
         embeddings = []
@@ -70,9 +74,18 @@ class FedNHClient(FedUHClient):
                 x, y = x.to(self.device), y.to(self.device)
                 # feature_embedding is normalized
                 # use the latest prototype
+                # logging.info(f'Round {i}: \n')
                 feature_embedding, logits = self.model.forward(x)
+                # logging.info(f'feature_embedding la:{feature_embedding}')
+                # logging.info(f'logits la:{logits}')
+                print(f'feature_embedding la:{feature_embedding}')
+                print(f'logits la:{logits}')
                 prob_ = F.softmax(logits, dim=1)
+                print(f'prob_ la:{prob_}')
+                # logging.info(f'prob_ la:{prob_}')
                 prob = torch.gather(prob_, dim=1, index=y.view(-1, 1))
+                print(f'prob la: {prob}')
+                # logging.info(f'prob la: {prob}')
                 labels.append(y)
                 weights.append(prob)
                 embeddings.append(feature_embedding)
@@ -80,13 +93,18 @@ class FedNHClient(FedUHClient):
         embeddings = torch.cat(embeddings, dim=0)
         labels = torch.cat(labels, dim=0)
         weights = torch.cat(weights, dim=0).view(-1, 1)
+        # logging.info("######################### for cls in self.count_by_class ##############################")
         for cls in self.count_by_class.keys():
             mask = (labels == cls)
+            # logging.info(f'MASK: {mask}')
             weights_in_cls = weights[mask, :]
+            # logging.info(f'WEIGHT IN CLASS: {weights_in_cls}')
             feature_embedding_in_cls = embeddings[mask, :]
+            # logging.info(f'FEATURE EMBEDDING: {feature_embedding_in_cls}')
             prototype[cls] = torch.sum(feature_embedding_in_cls * weights_in_cls, dim=0) / torch.sum(weights_in_cls)
             prototype_cls_norm = torch.norm(prototype[cls]).clamp(min=1e-12)
             prototype[cls] = torch.div(prototype[cls], prototype_cls_norm)
+            # logging.info(f'PROTOTYPE[CLS: {prototype}')
 
         # calculate predictive power
         to_share = {'adv_agg_prototype': prototype, 'count_by_class_full': self.count_by_class_full}

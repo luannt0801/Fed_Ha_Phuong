@@ -1,6 +1,7 @@
 from collections import OrderedDict, Counter
 import numpy as np
 from tqdm import tqdm
+import logging
 from copy import deepcopy
 import torch
 try:
@@ -66,7 +67,7 @@ class FedUHClient(Client):
                     theta = i * 2 * torch.pi / num_cls
                     W[i, :] = torch.tensor([r * math.cos(theta), r * math.sin(theta)])
                 self.model.prototype.copy_(W)
-            else:
+            else: 
                 raise NotImplementedError(f"{self.client_config['FedNH_head_init']} + {self.client_config['num_classes']}d")
         except AttributeError:
             raise NotImplementedError("Only support linear layers now.")
@@ -75,6 +76,7 @@ class FedUHClient(Client):
             self.model.scaling.requires_grad_(False)
             self.model.scaling.data = torch.tensor(30.0).to(self.device)
             print('self.model.scaling.data:', self.model.scaling.data)
+            logging.info(f'self.model.scaling.data:{self.model.scaling.data}')
 
     def training(self, round, num_epochs):
         """
@@ -166,9 +168,11 @@ class FedUHServer(FedAvgServer):
         super().__init__(server_config, clients_dict, exclude, **kwargs)
         if len(self.exclude_layer_keys) > 0:
             print(f"FedUHServer: the following keys will not be aggregate:\n ", self.exclude_layer_keys)
+            logging.info(f"FedUHServer: the following keys will not be aggregate:\n {self.exclude_layer_keys}")
         freeze_layers = []
         for param in self.server_side_client.model.named_parameters():
             if param[1].requires_grad == False:
                 freeze_layers.append(param[0])
         if len(freeze_layers) > 0:
             print("FedUHServer: the following layers will not be updated:", freeze_layers)
+            logging.info(f"FedUHServer: the following layers will not be updated: {freeze_layers}")

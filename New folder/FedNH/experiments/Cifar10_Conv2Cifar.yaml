@@ -105,4 +105,4 @@ client_config:
   # # # in the actual test I set both of them to be the same and derive them from the setup_optimizer function to make fair comparison
   # # pFedMe_pmodel_lr: 0.05
   # # pFedMe_lgmodel_lr: 0.05
-
+  
