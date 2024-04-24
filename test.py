@@ -1,28 +1,22 @@
-import torch
-import math
-
-# Suppose the input image size is 224x224 with 3 color channels (RGB)
-input_channels = 3
-
-# Suppose we want to classify images into 10 different classes
-num_classes = 10
-
-FedNH_head_init = 'orthogonal'
-dim = 2
-
-# Example initialization based on FedNH_head_init setting
-if FedNH_head_init == 'orthogonal':
-    # Initializing with orthogonal initialization
-    m, n = num_classes, input_channels
-    prototype = torch.nn.init.orthogonal_(torch.rand(m, n))
-    print(prototype)
-
-elif FedNH_head_init == 'uniform' and dim == 2:
-    # Uniform initialization in 2D space
-    r = 1.0
-    W = torch.zeros(num_classes, 2)
-    for i in range(num_classes):
-        theta = i * 2 * math.pi / num_classes
-        W[i, :] = torch.tensor([r * math.cos(theta), r * math.sin(theta)])
-    prototype = W
-    print(prototype)
+ elif datasetname == "Cifar10":
+        transform_train = transforms.Compose([
+            transforms.RandomCrop(32, padding=4),
+            transforms.RandomHorizontalFlip(),
+            torchvision.transforms.ToTensor(),
+            torchvision.transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)),
+        ])
+        transform_test = transforms.Compose([
+            torchvision.transforms.ToTensor(),
+            torchvision.transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)),
+        ])
+        invTrans = transforms.Compose([transforms.Normalize(mean=[0., 0., 0.],
+                                                            std=[1 / 0.2023, 1 / 0.1994, 1 / 0.2010]),
+                                       transforms.Normalize(mean=[-0.4914, -0.4822, -0.4465],
+                                                            std=[1., 1., 1.]),
+                                       ])
+        trainset = torchvision.datasets.CIFAR10(root='~/data', train=True,
+                                                download=True, transform=transform_train)
+        testset = torchvision.datasets.CIFAR10(root='~/data', train=False,
+                                               download=True, transform=transform_test)
+        trainset.targets = torch.tensor(trainset.targets)
+        testset.targets = torch.tensor(testset.targets)
