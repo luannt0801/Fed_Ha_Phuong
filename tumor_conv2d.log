@@ -1,0 +1,51 @@
+136it [00:05, 22.89it/s]
+Epoch: 1 | train_loss: 2.6456 | train_acc: 0.3220 | test_loss: 2.5073 | test_acc: 0.3241
+136it [00:04, 28.02it/s]
+Epoch: 2 | train_loss: 2.4838 | train_acc: 0.3824 | test_loss: 2.5316 | test_acc: 0.3867
+136it [00:04, 28.48it/s]
+Epoch: 3 | train_loss: 2.4505 | train_acc: 0.4151 | test_loss: 2.4564 | test_acc: 0.3543
+136it [00:05, 27.02it/s]
+Epoch: 4 | train_loss: 2.4162 | train_acc: 0.4314 | test_loss: 2.4066 | test_acc: 0.4429
+136it [00:05, 23.36it/s]
+Epoch: 5 | train_loss: 2.3913 | train_acc: 0.4433 | test_loss: 2.4016 | test_acc: 0.4367
+136it [00:07, 19.01it/s]
+Epoch: 6 | train_loss: 2.3681 | train_acc: 0.4447 | test_loss: 2.3847 | test_acc: 0.4570
+136it [00:07, 18.98it/s]
+Epoch: 7 | train_loss: 2.3569 | train_acc: 0.4534 | test_loss: 2.4035 | test_acc: 0.4447
+136it [00:07, 19.15it/s]
+Epoch: 8 | train_loss: 2.3686 | train_acc: 0.4529 | test_loss: 2.3504 | test_acc: 0.4650
+136it [00:07, 19.24it/s]
+Epoch: 9 | train_loss: 2.3327 | train_acc: 0.4729 | test_loss: 2.2951 | test_acc: 0.4779
+136it [00:07, 18.96it/s]
+Epoch: 10 | train_loss: 2.3280 | train_acc: 0.4697 | test_loss: 2.2865 | test_acc: 0.4867
+136it [00:07, 19.36it/s]
+Epoch: 11 | train_loss: 2.3231 | train_acc: 0.4701 | test_loss: 2.3096 | test_acc: 0.4778
+136it [00:07, 19.41it/s]
+Epoch: 12 | train_loss: 2.2993 | train_acc: 0.4842 | test_loss: 2.2640 | test_acc: 0.4950
+136it [00:07, 19.12it/s]
+Epoch: 13 | train_loss: 2.2919 | train_acc: 0.4966 | test_loss: 2.3316 | test_acc: 0.4690
+136it [00:07, 18.99it/s]
+Epoch: 14 | train_loss: 2.3173 | train_acc: 0.4711 | test_loss: 2.3284 | test_acc: 0.4502
+136it [00:07, 19.15it/s]
+Epoch: 15 | train_loss: 2.2761 | train_acc: 0.4993 | test_loss: 2.3013 | test_acc: 0.4676
+136it [00:07, 19.00it/s]
+Epoch: 16 | train_loss: 2.2770 | train_acc: 0.4921 | test_loss: 2.2556 | test_acc: 0.5019
+136it [00:07, 19.19it/s]
+Epoch: 17 | train_loss: 2.2769 | train_acc: 0.5000 | test_loss: 2.2625 | test_acc: 0.4890
+136it [00:07, 19.11it/s]
+Epoch: 18 | train_loss: 2.2466 | train_acc: 0.5013 | test_loss: 2.2335 | test_acc: 0.5041
+136it [00:07, 19.33it/s]
+Epoch: 19 | train_loss: 2.2695 | train_acc: 0.5055 | test_loss: 2.2631 | test_acc: 0.4793
+136it [00:07, 19.35it/s]
+Epoch: 20 | train_loss: 2.2535 | train_acc: 0.5051 | test_loss: 2.2293 | test_acc: 0.5028
+136it [00:07, 19.24it/s]
+Epoch: 21 | train_loss: 2.2475 | train_acc: 0.5028 | test_loss: 2.2457 | test_acc: 0.4776
+136it [00:07, 19.02it/s]
+Epoch: 22 | train_loss: 2.2493 | train_acc: 0.5046 | test_loss: 2.2342 | test_acc: 0.5152
+136it [00:07, 19.27it/s]
+Epoch: 23 | train_loss: 2.2330 | train_acc: 0.5154 | test_loss: 2.1994 | test_acc: 0.5228
+136it [00:07, 19.02it/s]
+Epoch: 24 | train_loss: 2.2432 | train_acc: 0.5138 | test_loss: 2.2209 | test_acc: 0.5205
+136it [00:07, 19.31it/s]
+Epoch: 25 | train_loss: 2.2276 | train_acc: 0.5225 | test_loss: 2.2185 | test_acc: 0.5136
+Total training time: 2806.041 seconds
